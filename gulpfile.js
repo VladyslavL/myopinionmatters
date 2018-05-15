@@ -25,7 +25,7 @@ gulp.task('html', function () {
     .pipe(browserSync.stream());
 })
 
-gulp.task('style', function () {
+gulp.task('styles', function () {
   gulp.src(['src/sass/*.+(scss|sass)'])
     .pipe(plumber())
     .pipe(fileInclude({
@@ -39,7 +39,7 @@ gulp.task('style', function () {
     .pipe(browserSync.stream());
 });
 
-gulp.task('script', function () {
+gulp.task('scripts', function () {
   gulp.src(['src/js/*.js'])
     .pipe(plumber())
     .pipe(fileInclude({
@@ -65,15 +65,6 @@ gulp.task('move', function () {
     }))
     .pipe(gulp.dest('dist/fonts/'))
 
-  gulp.src(['src/php/**/*'])
-    .pipe(plumber())
-    .pipe(fileInclude({
-      prefix: '@@',
-      basepath: '@root'
-    }))
-    .pipe(gulp.dest('dist/php/'))
-    .pipe(browserSync.stream());
-
   gulp.src(['src/.htaccess'])
     .pipe(gulp.dest('dist/'))
 
@@ -81,7 +72,7 @@ gulp.task('move', function () {
     .pipe(gulp.dest('dist/favicons/'))
 })
 
-gulp.task('dev', ['html', 'style', 'script', 'images', 'move'], function () {
+gulp.task('dev', ['html', 'styles', 'scripts', 'images', 'move'], function () {
 
   browserSync.init({
     server: {
@@ -90,10 +81,9 @@ gulp.task('dev', ['html', 'style', 'script', 'images', 'move'], function () {
     notify: true
   });
 
-  gulp.watch("src/sass/**/*.+(scss|sass)", ['style']);
-  gulp.watch("src/js/**/*.*", ['script']);
+  gulp.watch("src/sass/**/*.+(scss|sass)", ['styles']);
+  gulp.watch("src/js/**/*.*", ['scripts']);
   gulp.watch("src/**/*.html", ['html']);
   gulp.watch("src/images/**/*.*", ['images']);
   gulp.watch("src/fonts/**/*.*", ['move']);
-  gulp.watch("src/php/**/*.*", ['move']);
 });
