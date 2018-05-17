@@ -24,6 +24,30 @@ h3, .h3{
   font-size: 16px;
 }
 
+.btn{
+  border-radius: 4px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 10px 12px;
+  border: 1px solid currentColor;
+  text-align: center;
+  line-height: 1;
+  @include transition(opacity);
+  &:hover{
+    opacity: 0.9;
+    text-decoration: none;
+  }
+  &--large{
+    padding: 15px 12px;
+  }
+  &--red{
+    background-color: $color-warn;
+    border-color: $color-warn;
+  }
+}
+
 .bg-{
   &cover{
     background-size: cover;
@@ -98,12 +122,16 @@ h3, .h3{
       z-index: 1;
       width: 48px;
       height: 100%;
+      &.right{
+        left: auto;
+        right: 0;
+      }
       img{
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        display: block;
+//         display: block;
         max-width: 30px;
         max-height: 27px;
       }
@@ -115,6 +143,7 @@ input:not([type="checkbox"]){
   display: block;
   width: 100%;
   padding: 6px 12px;
+  min-height: 44px;
   border: 1px solid;
   border-color: $color-secondary;
   background-color: #fff;
@@ -206,16 +235,39 @@ input[type="checkbox"]{
   }
 }
 
-// Home nav styles
+.full-screen{
+  min-height: 100vh;
+  width: 100%;
+}
+
+.nav-padding{
+  padding-top: 65px;
+  @media screen and (min-width: map-get($grid-breakpoints, md)){
+    padding-top: 100px;
+  }
+}
+
+// Nav main styles
 .nav-main{
-  height: 100px;
+  height: 65px;
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  z-index: 11;
+  @include transition(background-color);
+  @media screen and (min-width: map-get($grid-breakpoints, md)){
+    height: 100px;
+  }  
+  &.scrolled{
+    background-color: rgba(100, 109, 118, 0.8);
+  }
   .logo{
     img{
-      max-height: 36px;
+      max-height: 28px;
+      @media screen and (min-width: map-get($grid-breakpoints, md)){
+        max-height: 36px;
+      }
     }
   }
   .login-btn{
@@ -233,21 +285,112 @@ input[type="checkbox"]{
   }
 }
 
+// Sidenav main styles
+.sidenav-main{
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  z-index: 12;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  @include transition(transform);
+  @media screen and (min-width: map-get($grid-breakpoints,lg)){
+    width: 33%;
+    max-width: 400px;
+    border-left: 1px solid $text-color-secondary;
+  }
+  &.is-active{
+    transform: translateX(0);
+  }
+  &_header{
+    height: 100px;
+    padding: 20px;
+    .close-btn{
+      padding: 10px;
+      margin-right: 10px;
+      position: relative;
+      span{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 22px;
+        height: 4px;
+        border-radius: 4px;
+        background-color: $text-color-primary;
+        transform-origin: center center;
+        transform: translateY(-50%) rotate(45deg);
+        &:last-of-type{
+          transform: translateY(-50%) rotate(-45deg);          
+        }
+      }
+    }
+  }
+  &_content{
+    a{
+      font-size: 20px;
+      color: $text-color-secondary;
+      margin-bottom: 40px;
+      &:hover{
+        color: $color-warn;
+        text-decoration: none;
+      }
+      &.active{
+        color: $color-warn;
+        font-weight: 600;        
+        text-decoration: underline;
+      }
+    }
+    
+  }
+}
+
 // Header styles
 .header-main{
-  min-height: 710px;
-  padding-top: 100px;
+  background-size: 0;
+  background-color: #f7f7f7;
+  @media screen and (min-width: map-get($grid-breakpoints, lg)){
+    min-height: 710px;
+    background-size: cover;
+  }
+  &_content{
+    @media screen and (max-width: map-get($grid-breakpoints, lg) - 1){
+      max-width: 100%;
+    }
+  }
+  &_mask{
+    min-height: 385px;
+    @media screen and (min-width: map-get($grid-breakpoints, sm)){
+      min-height: 500px;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, lg)){
+      min-height: 0;
+      background-size: 0;
+    }
+  }
+  &_column{
+    padding-top: 65px;
+    @media screen and (min-width: map-get($grid-breakpoints, md)){
+      padding-top: 100px;
+    }
+  }
   &_title{
     font-weight: 300;
     letter-spacing: 1.5px;
     padding-bottom: 20px;
+    font-size: 24px;
   }
 }
 
 .signup-panel{
   max-width: 395px;
-  padding: 10px 22px;
+  padding: 10px;  
   background-color: rgba(255,255,255,0.2);
+  border: 1px solid $text-color-primary;
+  @media screen and (min-width: map-get($grid-breakpoints, lg)){
+    padding: 10px 22px;
+  }
   button.form-btn{
     color: #fff;
     &.login{
@@ -281,6 +424,10 @@ input[type="checkbox"]{
 
   &_content{
     padding: 15px;
+    @media screen and (max-width: map-get($grid-breakpoints, lg) - 1){
+      padding: 15px 0;
+      color: $text-color-primary;
+    }
 
     h4{
       font-size: 19px;
@@ -295,7 +442,19 @@ input[type="checkbox"]{
 
     span{
       height: 1px;
-      background-color: #fff;
+      background-color: currentColor;
+    }
+  }
+
+  .password-field{
+    input{
+      padding-right: 48px;
+      &[type="password"] ~ .togglePassword img.icon-hide{display: block;}
+      &[type="text"] ~ .togglePassword img.icon-show{display: block;}
+    }
+    .togglePassword{
+      z-index: 3;
+      cursor: pointer;
     }
   }
 }
@@ -396,7 +555,6 @@ input[type="checkbox"]{
     letter-spacing: 0.3px;
     padding: 6px 14px;
     font-weight: 300;
-    margin-top: 20px;
     @include transition;
     &:hover{
       background-color: #fff;
@@ -430,8 +588,41 @@ input[type="checkbox"]{
       margin-right: 20px;
     }
   }
+
+  .gift-slider-paggy{
+    width: 100%;
+    left: 0;
+    text-align: center;
+    bottom: 35px;
+  }
+
+  .testimonial-slider{
+    padding-bottom: 70px;
+    margin-bottom: 20px;
+  }
 }
 
+// Page content styles
+.page-content{
+  h1, h2, h3{
+    padding: 1em 0;
+    font-weight: 300;
+  }
+  h1{
+    font-weight: 400;
+  }
+
+  p{
+    font-weight: 300;
+    padding-bottom: 1em;
+  }
+
+  .btn{
+    margin: 2em 0;
+  }
+}
+
+// Footer styles
 .footer-main{
   background-color: #646d76;
   padding: 10px 20px;
@@ -441,3 +632,5 @@ input[type="checkbox"]{
     }
   }
 }
+
+@import 'vendor';

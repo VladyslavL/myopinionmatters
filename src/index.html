@@ -21,31 +21,48 @@
           <img src="images/icons/my_opinion_matters_logo.png" alt=""></a>
         </div>
         <div class="col-auto d-flex align-items-center">
-          <div class="hamburger-btn default-hover">
+          <div class="hamburger-btn default-hover sidenav-main-trigger">
             <div></div>
             <div></div>
             <div></div>
           </div>
-          <a href="#" class="btn login-btn small text-transform_caps no-underline"><b>Login</b></a>
+          <a href="join.html" class="btn login-btn small text-transform_caps no-underline d-md-block" hidden><b>Login</b></a>
         </div>
       </div>
     </div>
   </div>
-  
-  <div class="header-main bg-cover d-flex align-items-center" style="background-image: url('./images/header-images/01_home_image.jpg')">
-    <div class="container">
-      <div class="row">
-        <section class="col-md-6 text-align_center text-color_white d-flex align-items-center">
-          <div class="col-9 mx-auto">
-            <h1 class="header-main_title text-transform_caps">Get Free Gift Cards For Your Opinions</h1>
-            <a href="#" class="d-block no-underline default-hover">
-              <img src="images/icons/play_button.png" alt="">
 
+  <div class="sidenav-main d-flex flex-column">
+    <div class="sidenav-main_header d-flex align-items-center justify-content-end">
+      <div class="close-btn default-hover sidenav-main-trigger-close">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <nav class="sidenav-main_content d-flex flex-column align-items-center">
+      <a href="#" class="active">HOME</a>
+      <a href="#">ABOUT US</a>
+      <a href="#">REWARDS</a>
+      <a href="#">FAQ</a>
+      <a href="#">NEWS</a>
+      <a href="#">CONTACT US</a>
+      <a href="#">JOIN</a>
+    </nav>
+  </div>
+  
+  <div class="header-main bg-cover d-flex bg-cover align-items-center" style="background-image: url('./images/header-images/01_home_image.jpg')">
+    <div class="container header-main_content">
+      <div class="row">
+        <section class="col-lg-6 header-main_column text-align_center text-color_white d-flex align-items-center bg-cover header-main_mask" style="background-image: url('./images/header-images/01_home_image.jpg')">
+          <div class="col-sm-9 mx-auto">
+            <h1 class="header-main_title text-transform_caps">Get Free Gift Cards For Your Opinions</h1>
+            <a href="#" class="d-block no-underline default-hover" data-micromodal-trigger="modal-1">
+              <img src="images/icons/play_button.png" alt="">
               <p>Find out how it works</p>
             </a>
           </div>          
         </section>
-        <div class="col-md-6">
+        <div class="col-lg-6 header-main_column">
           <div class="signup-panel mx-auto d-flex flex-wrap">
             <input type="radio" name="toggle-form" id="toggle-form1" checked="checked" class="d-none">
             <label for="toggle-form1" class="signup-panel_tab-button">Login</label>
@@ -63,18 +80,15 @@
                     <img src="images/icons/email.png" alt="">
                   </div>
                 </div>
-                <div class="field with-icon">
-                  <input type="password" name="password" placeholder="Password">
+                <div class="field with-icon password-field">
+                  <input type="password" name="password" placeholder="Password" class="password-input">
                   <div class="input-icon">
                     <img src="images/icons/password.png" alt="">
                   </div>
-                </div>
-
-                <div class="field">
-                  <label for="pswrd-visibility">
-                    <input type="checkbox" name="pswrd-visibility" id="">
-                    Show/Hide Password
-                  </label>
+                  <div class="input-icon right togglePassword">
+                    <img src="images/icons/hide.svg" alt="" class="icon-hide" hidden>
+                    <img src="images/icons/view.svg" alt="" class="icon-show" hidden>
+                  </div>
                 </div>
 
                 <div class="field">
@@ -107,18 +121,15 @@
                     <img src="images/icons/email.png" alt="">
                   </div>
                 </div>
-                <div class="field with-icon">
-                  <input type="password" name="password" placeholder="Password">
+                <div class="field with-icon password-field">
+                  <input type="password" name="password" placeholder="Password" class="password-input">
                   <div class="input-icon">
                     <img src="images/icons/password.png" alt="">
                   </div>
-                </div>
-
-                <div class="field">
-                  <label for="pswrd-visibility">
-                    <input type="checkbox" name="pswrd-visibility" id="pswrd-visibility">
-                    Show/Hide Password
-                  </label>
+                  <div class="input-icon right togglePassword">
+                    <img src="images/icons/hide.svg" alt="" class="icon-hide" hidden>
+                    <img src="images/icons/view.svg" alt="" class="icon-show" hidden>
+                  </div>
                 </div>
 
                 <div class="field">
@@ -169,8 +180,21 @@
         <article class="col-lg-4 d-flex">
           <a href="#" class="section_box section_box--with-border bg-color_white no-underline">
             <div class="section_box-media d-flex align-items-center">
-              <div class="mx-auto">
-                <img src="images/icons/gift_card_01.png" alt="">
+              <div class="swiper-container gift-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide mx-auto">
+                    <img src="images/icons/gift_card_01.png" alt="">
+                  </div>
+                  <div class="swiper-slide mx-auto">
+                    <img src="images/icons/gift_card_02.png" alt="">
+                  </div>
+                  <div class="swiper-slide mx-auto">
+                    <img src="images/icons/gift_card_03.png" alt="">
+                  </div>
+                  <div class="swiper-slide mx-auto">
+                    <img src="images/icons/gift_card_04.png" alt="">
+                  </div>
+                </div>
               </div>
             </div>
             <div class="section_box-header">
@@ -179,6 +203,7 @@
             <div class="section_box-description">
               <p>Get rewarded for every survey you complete and can choose from a <span class="text-color_warn">massive range of Reward Partners</span></p>
             </div>
+            <div class="swiper-pagination gift-slider-paggy"></div>
           </a>
         </article>
 
@@ -267,15 +292,33 @@
           <h2 class="section_header h3 text-transform_caps">Testimonials</h2>
         </section>
         <div class="col-lg-8 mx-auto">
-          <figure class="section_testimonial">
-            <blockquote><i>The surveys are interesting and varied, and it is nice to be able to influence the brands that I usually buy.</i></blockquote>
-            <footer>
-              <cite class="author"><small>Piotr, 41, Limerick</small></cite>
-            </footer>
-          </figure>
+          <div class="swiper-container testimonial-slider">
+            <div class="swiper-wrapper">
+              <figure class="section_testimonial swiper-slide">
+                <blockquote><i>The surveys are interesting and varied, and it is nice to be able to influence the brands that I usually buy.</i></blockquote>
+                <footer>
+                  <cite class="author"><small>Piotr, 41, Limerick</small></cite>
+                </footer>
+              </figure>
+              <figure class="section_testimonial swiper-slide">
+                <blockquote><i>The surveys are interesting and varied, and it is nice to be able to influence the brands that I usually buy.</i></blockquote>
+                <footer>
+                  <cite class="author"><small>Piotr, 41, Limerick</small></cite>
+                </footer>
+              </figure>
+              <figure class="section_testimonial swiper-slide">
+                <blockquote><i>The surveys are interesting and varied, and it is nice to be able to influence the brands that I usually buy.</i></blockquote>
+                <footer>
+                  <cite class="author"><small>Piotr, 41, Limerick</small></cite>
+                </footer>
+              </figure>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination testimonial-slider-paggy"></div>
+          </div>
         </div>
         <div class="col-12">
-          <a href="#" class="section_join-btn btn d-inline-block text-transform_caps no-underline">Join now!</a>
+          <a href="join.html" class="section_join-btn btn d-inline-block text-transform_caps no-underline">Join now!</a>
         </div>
       </div>
     </div>
@@ -354,5 +397,28 @@
       </div>
     </div>
   </footer>
+
+
+  <!-- modals -->
+  <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <header class="modal__header">
+          <h2 class="modal__title" id="modal-1-title">
+            Find out how it works
+          </h2>
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+        </header>
+        <div class="modal__content" id="modal-1-content">
+          <div class="embed-responsive-16by9 embed-responsive">
+              <iframe src="https://player.vimeo.com/video/237874977" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

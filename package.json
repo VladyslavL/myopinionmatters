@@ -20,8 +20,9 @@
     "gulp-sourcemaps": "*",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
+    "micromodal": "^0.3.2",
     "normalize.css": "*",
     "rfs": "^7.1.1",
-    "swiper": "^4.2.0"
+    "swiper": "^4.2.6"
   }
 }
