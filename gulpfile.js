@@ -87,3 +87,75 @@ gulp.task('dev', ['html', 'styles', 'scripts', 'images', 'move'], function () {
   gulp.watch("src/images/**/*.*", ['images']);
   gulp.watch("src/fonts/**/*.*", ['move']);
 });
+
+//TASKS FOR THE DEPLOY ===========================================================
+gulp.task('b-html', function () {
+  gulp.src(["src/**/*.html", "!src/fonts/**", "!src/components/**"])
+    .pipe(plumber())
+    .pipe(fileInclude({
+      prefix: '@@',
+      basepath: '@root'
+    }))
+    // .pipe(htmlmin({
+    //   collapseWhitespace: true
+    // }))
+    .pipe(gulp.dest('app/'))
+})
+
+gulp.task('b-style', function () {
+  gulp.src(['src/sass/*.+(scss|sass)'])
+    .pipe(plumber())
+    .pipe(fileInclude({
+      prefix: '@@',
+      basepath: '@root'
+    }))
+    .pipe(sass())
+    // .pipe(csso())
+    .pipe(gulp.dest('app/css/'))
+});
+
+gulp.task('b-script', function () {
+  gulp.src(['src/js/*.js'])
+    .pipe(plumber())
+    .pipe(fileInclude({
+      prefix: '@@',
+      basepath: '@root'
+    }))
+    // .pipe(uglify())
+    .pipe(gulp.dest('app/js/'))
+});
+
+gulp.task('b-images', function () {
+  gulp.src(['src/images/**/*'])
+    .pipe(plumber())
+    .pipe(imagemin())
+    .pipe(gulp.dest('app/images/'))
+});
+
+gulp.task('b-move', function () {
+  gulp.src(['src/fonts/**/*'])
+    .pipe(plumber())
+    .pipe(fileInclude({
+      prefix: '@@',
+      basepath: '@root'
+    }))
+    .pipe(gulp.dest('app/fonts/'))
+
+  gulp.src(['src/php/**/*'])
+    .pipe(plumber())
+    .pipe(fileInclude({
+      prefix: '@@',
+      basepath: '@root'
+    }))
+    .pipe(gulp.dest('app/php/'))
+
+  gulp.src(['src/.htaccess'])
+    .pipe(gulp.dest('app/'))
+
+  gulp.src(['src/favicons/**/*'])
+    .pipe(gulp.dest('app/favicons/'))
+});
+
+gulp.task('build', ['b-html', 'b-style', 'b-script', 'b-images', 'b-move'], function () {
+
+})

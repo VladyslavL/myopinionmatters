@@ -5,11 +5,354 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Home | MyOpinionMatters</title>
-
+  <!-- styles -->
   <link rel="stylesheet" href="css/bootstrap-grid.css">
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700" rel="stylesheet">
 </head>
 <body>
+  <div class="nav-main text-color_white d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col flex-grow-1 d-flex align-items-center">
+          <a href="/" class="logo d-flex">
+          <img src="images/icons/my_opinion_matters_logo.png" alt=""></a>
+        </div>
+        <div class="col-auto d-flex align-items-center">
+          <div class="hamburger-btn default-hover">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <a href="#" class="btn login-btn small text-transform_caps no-underline"><b>Login</b></a>
+        </div>
+      </div>
+    </div>
+  </div>
   
+  <div class="header-main bg-cover d-flex align-items-center" style="background-image: url('./images/header-images/01_home_image.jpg')">
+    <div class="container">
+      <div class="row">
+        <section class="col-md-6 text-align_center text-color_white d-flex align-items-center">
+          <div class="col-9 mx-auto">
+            <h1 class="header-main_title text-transform_caps">Get Free Gift Cards For Your Opinions</h1>
+            <a href="#" class="d-block no-underline default-hover">
+              <img src="images/icons/play_button.png" alt="">
+
+              <p>Find out how it works</p>
+            </a>
+          </div>          
+        </section>
+        <div class="col-md-6">
+          <div class="signup-panel mx-auto d-flex flex-wrap">
+            <input type="radio" name="toggle-form" id="toggle-form1" checked="checked" class="d-none">
+            <label for="toggle-form1" class="signup-panel_tab-button">Login</label>
+          
+            <input type="radio" name="toggle-form" id="toggle-form2" class="d-none">
+            <label for="toggle-form2" class="signup-panel_tab-button">Register</label>
+
+            <div id="form1" class="signup-panel_content w-100 text-color_white" hidden>
+              <h4 class="text-align_center">Login with your email</h4>
+
+              <form action="">
+                <div class="field with-icon">
+                  <input type="email" name="email" placeholder="Email Address">
+                  <div class="input-icon">
+                    <img src="images/icons/email.png" alt="">
+                  </div>
+                </div>
+                <div class="field with-icon">
+                  <input type="password" name="password" placeholder="Password">
+                  <div class="input-icon">
+                    <img src="images/icons/password.png" alt="">
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="pswrd-visibility">
+                    <input type="checkbox" name="pswrd-visibility" id="">
+                    Show/Hide Password
+                  </label>
+                </div>
+
+                <div class="field">
+                  <button class="form-btn login">Login ›</button>
+                </div>
+
+                <div class="field d-flex signup-panel_form-divider align-items-center">
+                  <span class="d-flex flex-grow-1"></span>
+                  <p class="text-transform_caps">or</p>
+                  <span class="d-flex flex-grow-1"></span>
+                </div>
+
+                <div class="field">
+                  <button class="form-btn login fb-login with-icon">Login with Facebook <span class="btn-icon"><img src="images/icons/fb.png" alt="" srcset=""></span></button>
+                </div>
+
+                <div class="col">
+                  <p class="terms text-align_center"><small><a href="#"><b>Forgot Password?</b></a></small><br><br></p>
+                </div>
+              </form>
+            </div>
+
+            <div id="form2" class="signup-panel_content w-100 text-color_white" hidden>
+              <h4 class="text-align_center">Join Now and Get 500 Free Points!</h4>
+
+              <form action="">
+                <div class="field with-icon">
+                  <input type="email" name="email" placeholder="Email Address">
+                  <div class="input-icon">
+                    <img src="images/icons/email.png" alt="">
+                  </div>
+                </div>
+                <div class="field with-icon">
+                  <input type="password" name="password" placeholder="Password">
+                  <div class="input-icon">
+                    <img src="images/icons/password.png" alt="">
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="pswrd-visibility">
+                    <input type="checkbox" name="pswrd-visibility" id="pswrd-visibility">
+                    Show/Hide Password
+                  </label>
+                </div>
+
+                <div class="field">
+                  <button class="form-btn login">Join Now ›</button>
+                </div>
+
+                <div class="field d-flex signup-panel_form-divider align-items-center">
+                  <span class="d-flex flex-grow-1"></span>
+                  <p class="text-transform_caps">or</p>
+                  <span class="d-flex flex-grow-1"></span>
+                </div>
+
+                <div class="field">
+                  <button class="form-btn login fb-login with-icon">Sign Up using Facebook <span class="btn-icon"><img src="images/icons/fb.png" alt="" srcset=""></span></button>
+                </div>
+
+                <div class="col"><p class="terms text-align_center"><small>By signing up I agree to the <a href="#"><b>terms and conditions</b></a> and <a href="#"><b>privacy policy</b></a>.</small></p></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section text-align_center section--bg_grey">
+    <div class="container">
+      <div class="row">
+        <section class="col-12">
+          <h2 class="section_header h1 text-transform_caps">Why Join?</h2>
+        </section>
+        <article class="col-lg-4 d-flex">
+          <a href="#" class="section_box section_box--with-border bg-color_white no-underline">
+            <div class="section_box-media d-flex align-items-center">
+              <div class="mx-auto">
+                <img src="images/icons/influence.png" alt="">
+              </div>
+            </div>
+            <div class="section_box-header">
+              <h3 class="h2">Have Your Say</h3>
+            </div>
+            <div class="section_box-description">
+              <p>Your opinions will help shape and influence tops brands in Ireland and around the world.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="col-lg-4 d-flex">
+          <a href="#" class="section_box section_box--with-border bg-color_white no-underline">
+            <div class="section_box-media d-flex align-items-center">
+              <div class="mx-auto">
+                <img src="images/icons/gift_card_01.png" alt="">
+              </div>
+            </div>
+            <div class="section_box-header">
+              <h3 class="h2">Free Gift Cards</h3>
+            </div>
+            <div class="section_box-description">
+              <p>Get rewarded for every survey you complete and can choose from a <span class="text-color_warn">massive range of Reward Partners</span></p>
+            </div>
+          </a>
+        </article>
+
+        <article class="col-lg-4 d-flex">
+          <a href="#" class="section_box section_box--with-border bg-color_white no-underline">
+            <div class="section_box-media d-flex align-items-center">
+              <div class="mx-auto">
+                <img src="images/icons/prizes.png" alt="">
+              </div>
+            </div>
+            <div class="section_box-header">
+              <h3 class="h2">Win Big Prizes</h3>
+            </div>
+            <div class="section_box-description">
+              <p>Every month you can enter our Big Prize Draw for Luxurious Weekend Breaks, Concert Tickets and more.</p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="section text-align_center">
+    <div class="container">
+      <div class="row">
+        <section class="col-12">
+          <h2 class="section_header h3 text-transform_caps"><a href="#">How it works</a></h2>
+        </section>
+        <div class="col-lg-4 d-flex">
+          <article class="section_box bg-color_white no-underline">
+            <div class="section_box-media d-flex align-items-center">
+              <div class="mx-auto">
+                <img src="images/icons/surveys.png" alt="">
+              </div>
+            </div>
+            <div class="section_box-header">
+              <h3 class="h2">Take Surveys</h3>
+            </div>
+            <div class="section_box-description">
+              <p>Fill out quick surveys tailored to your profile</p>
+            </div>
+            <div class="filled-circle icon_chevron-right"></div>
+          </article>
+        </div>
+
+        <div class="col-lg-4 d-flex">
+          <article class="section_box bg-color_white no-underline">
+            <div class="section_box-media d-flex align-items-center">
+              <div class="mx-auto">
+                <img src="images/icons/points.png" alt="">
+              </div>
+            </div>
+            <div class="section_box-header">
+              <h3 class="h2">Earn Points</h3>
+            </div>
+            <div class="section_box-description">
+              <p>Each survey completed earns you points</p>
+            </div>
+            <div class="filled-circle icon_chevron-right"></div>
+          </article>
+        </div>
+
+        <div class="col-lg-4 d-flex">
+          <article class="section_box bg-color_white no-underline">
+            <div class="section_box-media d-flex align-items-center">
+              <div class="mx-auto">
+                <img src="images/icons/gift_card_prizes.png" alt="">
+              </div>
+            </div>
+            <div class="section_box-header">
+              <h3 class="h2">Get Free Gift Cards</h3>
+            </div>
+            <div class="section_box-description">
+              <p>Redeem the points against gift cards from companies such as Amazon, Brown Thomas and more...</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section text-align_center text-color_white section--bg_red">
+    <div class="container">
+      <div class="row">
+        <section class="col-12">
+          <h2 class="section_header h3 text-transform_caps">Testimonials</h2>
+        </section>
+        <div class="col-lg-8 mx-auto">
+          <figure class="section_testimonial">
+            <blockquote><i>The surveys are interesting and varied, and it is nice to be able to influence the brands that I usually buy.</i></blockquote>
+            <footer>
+              <cite class="author"><small>Piotr, 41, Limerick</small></cite>
+            </footer>
+          </figure>
+        </div>
+        <div class="col-12">
+          <a href="#" class="section_join-btn btn d-inline-block text-transform_caps no-underline">Join now!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section--bg_grey">
+    <div class="container">
+      <div class="row">
+        <section class="col-lg-6 d-flex">
+          <div class="section_bg-mask section">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="section_header h3 text-transform_caps text-align_center"><a href="#">ABOUT US</a></h2>
+              <p>MyOpinionMatters is Ireland's leading market research community. Made up of thousands of men and women just like you, MyOpinionMatters allows people from all over Ireland to participate in surveys and in return get paid for their opinions - as well as having the opportunity to help shape the products and services that companies provide.</p>
+            </div>
+          </div>
+        </section>
+        <section class="col-lg-6 d-flex">
+          <div class="section">
+            <h2 class="section_header h3 text-transform_caps text-align_center"><a href="#">faq</a></h2>
+            <div class="container offset-1">
+              <div class="row">
+                <div class="col-md-6">
+                  <a href="#" class="section_faq-item no-underline d-flex align-items-center default-hover">
+                    <img src="images/icons/faq_general_questions.png" alt="">
+                    <p>General Questions</p>
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="section_faq-item no-underline d-flex align-items-center default-hover">
+                    <img src="images/icons/faq_points.png" alt="">
+                    <p>Points & Rewards</p>
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="section_faq-item no-underline d-flex align-items-center default-hover">
+                    <img src="images/icons/faq_registration.png" alt="">
+                    <p>Registration</p>
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="section_faq-item no-underline d-flex align-items-center default-hover">
+                    <img src="images/icons/faq_details.png" alt="">
+                    <p>My Details</p>
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="section_faq-item no-underline d-flex align-items-center default-hover">
+                    <img src="images/icons/faq_surveys.png" alt="">
+                    <p>Surveys</p>
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="section_faq-item no-underline d-flex align-items-center default-hover">
+                    <img src="images/icons/faq_support.png" alt="">
+                    <p>Support</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-main">
+    <div class="container">
+      <div class="row">
+        <nav class="footer-links d-flex flex-wrap mx-auto align-items-center text-align_center text-color_white">
+          <a href="#">About Us</a>
+          <a href="#">Rewards</a>
+          <a href="#">Terms and Conditions</a>
+          <a href="#">Policy</a>
+          <a href="#">Contact Us</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

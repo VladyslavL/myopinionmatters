@@ -1,0 +1,19 @@
+// colors
+$color-primary: #ff4843;
+$color-secondary: #d0d5d8;
+$color-warn: #ff4843;
+
+$text-color-primary: #323a45;
+$text-color-secondary: #666;
+
+@mixin transition($prop: all, $dur: 0.15s, $tf: ease-in-out, $del: 0s){
+  transition: $prop $dur $del $tf;
+}
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+);
