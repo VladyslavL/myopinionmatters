@@ -10,7 +10,7 @@ body{
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   line-height: 1.66667;
-  background-color: #fff;
+  background-color: #f7f7f7;
   color: $text-color-primary;
 }
 
@@ -26,6 +26,59 @@ h3, .h3{
   font-weight: 700;
   text-transform: uppercase;
   font-size: 16px;
+}
+.field{
+  margin-bottom: 10px;
+  &.with-icon{
+    background-color: #fff;
+    border-radius: 4px;
+    position: relative;
+    input{
+      padding-left: 48px;
+      position: relative;
+      z-index: 2;
+      background-color: transparent;
+    }
+
+    .input-icon{
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 48px;
+      height: 100%;
+      &.right{
+        left: auto;
+        right: 0;
+      }
+      img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        //display: block;
+        max-width: 30px;
+        max-height: 27px;
+      }
+    }
+  }
+  &.password-field{
+    input{
+      padding-right: 48px;
+      &[type="password"] ~ .togglePassword img.icon-hide{display: block;}
+      &[type="text"] ~ .togglePassword img.icon-show{display: block;}
+    }
+    .togglePassword{
+      z-index: 3;
+      cursor: pointer;
+    }
+  }
+  label{
+    font-weight: 300;
+    letter-spacing: 0.6px;
+    padding: 10px 0;
+    display: block;
+  }
 }
 
 .btn{
@@ -141,55 +194,9 @@ h3, .h3{
   }
 }
 
-.field{
-  margin-bottom: 10px;
-  &.with-icon{
-    background-color: #fff;
-    border-radius: 4px;
-    position: relative;
-    input{
-      padding-left: 48px;
-      position: relative;
-      z-index: 2;
-      background-color: transparent;
-    }
 
-    .input-icon{
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      width: 48px;
-      height: 100%;
-      &.right{
-        left: auto;
-        right: 0;
-      }
-      img{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        //display: block;
-        max-width: 30px;
-        max-height: 27px;
-      }
-    }
-  }
-  &.password-field{
-    input{
-      padding-right: 48px;
-      &[type="password"] ~ .togglePassword img.icon-hide{display: block;}
-      &[type="text"] ~ .togglePassword img.icon-show{display: block;}
-    }
-    .togglePassword{
-      z-index: 3;
-      cursor: pointer;
-    }
-  }
-}
-
-input:not([type="checkbox"]){
+input:not([type="checkbox"]),
+textarea{
   display: block;
   width: 100%;
   padding: 6px 12px;
@@ -213,6 +220,10 @@ input[type="checkbox"]{
   width: 20px;
   height: 20px;
   vertical-align: middle;
+}
+
+textarea{
+
 }
 
 .hamburger-btn{
@@ -603,10 +614,6 @@ input[type="checkbox"]{
   p{
     font-weight: 300;
     padding-bottom: 1em;
-  }
-
-  .btn{
-    margin: 2em 0;
   }
 }
 
