@@ -1,0 +1,113 @@
+<div class="signup-panel mx-auto d-flex flex-wrap">
+  <input type="radio" name="toggle-form" id="toggle-form1" checked="checked" class="d-none">
+  <label for="toggle-form1" class="signup-panel_tab-button">Login</label>
+
+  <input type="radio" name="toggle-form" id="toggle-form2" class="d-none">
+  <label for="toggle-form2" class="signup-panel_tab-button">Register</label>
+
+  <div id="form1" class="signup-panel_content w-100 text-color_white" hidden>
+    <h4 class="text-align_center">Login with your email</h4>
+
+    <form action="">
+      <div class="field with-icon">
+        <input type="email" name="email" placeholder="Email Address" class="input--large">
+        <div class="input-icon">
+          <img src="images/icons/email.png" alt="">
+        </div>
+      </div>
+      <div class="field with-icon password-field">
+        <input type="password" name="password" placeholder="Password" class="password-input input--large">
+        <div class="input-icon">
+          <img src="images/icons/password.png" alt="">
+        </div>
+        <div class="input-icon right togglePassword">
+          <img src="images/icons/hide.svg" alt="" class="icon-hide" hidden>
+          <img src="images/icons/view.svg" alt="" class="icon-show" hidden>
+        </div>
+      </div>
+
+      <div class="field">
+        <button class="btn btn--large btn--red d-block">Login ›</button>
+      </div>
+
+      <div class="field d-flex signup-panel_form-divider align-items-center">
+        <span class="d-flex flex-grow-1"></span>
+        <p class="text-transform_caps">or</p>
+        <span class="d-flex flex-grow-1"></span>
+      </div>
+
+      <div class="field">
+        <button class="btn btn--large btn--blue d-block with-icon">Login with Facebook
+          <span class="btn-icon">
+            <img src="images/icons/fb.png" alt="">
+          </span>
+        </button>
+      </div>
+
+      <div class="col">
+        <p class="terms text-align_center">
+          <small>
+            <a href="#">
+              <b>Forgot Password?</b>
+            </a>
+          </small>
+          <br>
+          <br>
+        </p>
+      </div>
+    </form>
+  </div>
+
+  <div id="form2" class="signup-panel_content w-100 text-color_white" hidden>
+    <h4 class="text-align_center">Join Now and Get 500 Free Points!</h4>
+
+    <form action="">
+      <div class="field with-icon">
+        <input type="email" name="email" placeholder="Email Address" class="input--large">
+        <div class="input-icon">
+          <img src="images/icons/email.png" alt="">
+        </div>
+      </div>
+      <div class="field with-icon password-field">
+        <input type="password" name="password" placeholder="Password" class="password-input input--large">
+        <div class="input-icon">
+          <img src="images/icons/password.png" alt="">
+        </div>
+        <div class="input-icon right togglePassword">
+          <img src="images/icons/hide.svg" alt="" class="icon-hide" hidden>
+          <img src="images/icons/view.svg" alt="" class="icon-show" hidden>
+        </div>
+      </div>
+
+      <div class="field">
+        <button class="btn btn--large btn--red d-block">Join Now ›</button>
+      </div>
+
+      <div class="field d-flex signup-panel_form-divider align-items-center">
+        <span class="d-flex flex-grow-1"></span>
+        <p class="text-transform_caps">or</p>
+        <span class="d-flex flex-grow-1"></span>
+      </div>
+
+      <div class="field">
+        <button class="btn btn--large btn--blue d-block with-icon">Sign Up using Facebook
+          <span class="btn-icon">
+            <img src="images/icons/fb.png" alt="" srcset="">
+          </span>
+        </button>
+      </div>
+
+      <div class="col">
+        <p class="terms text-align_center">
+          <small>By signing up I agree to the
+            <a href="#">
+              <b>terms and conditions</b>
+            </a> and
+            <a href="#">
+              <b>privacy policy</b>
+            </a>.</small>
+        </p>
+      </div>
+    </form>
+  </div>
+</div>

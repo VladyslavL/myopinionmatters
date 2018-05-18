@@ -19,7 +19,10 @@ gulp.task('html', function () {
     .pipe(plumber())
     .pipe(fileInclude({
       prefix: '@@',
-      basepath: '@root'
+      basepath: '@root',
+      context: {
+        name: 'test'
+      }
     }))
     .pipe(gulp.dest('dist/'))
     .pipe(browserSync.stream());
