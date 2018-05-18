@@ -50,7 +50,8 @@ h3, .h3{
     &:hover{
       &.btn--white{
         background-color: #fff;
-        color: $text-color-primary
+        color: $text-color-primary;
+        border-color: $text-color-secondary
       }
     }
   }
@@ -546,17 +547,9 @@ input[type="checkbox"]{
   }
 
   &_join-btn{
-    border: 1px solid #fff;
-    color: #fff;
     font-size: 22px;
     letter-spacing: 0.3px;
-    padding: 6px 14px;
     font-weight: 300;
-    @include transition;
-    &:hover{
-      background-color: #fff;
-      color: $text-color-primary;
-    }
   }
 
   &_bg-mask{
