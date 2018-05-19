@@ -586,6 +586,10 @@ textarea{
       max-height: 35px;
       margin-right: 20px;
     }
+    p{
+      padding: 0;
+      margin: 0;
+    }
   }
 
   .gift-slider-paggy{
@@ -614,6 +618,23 @@ textarea{
   p{
     font-weight: 300;
     padding-bottom: 1em;
+  }
+
+  .logo-grid{
+    .grid-elem{
+      padding: 10px;
+      border: 1px solid $text-color-secondary;
+      width: 25%;
+    }
+  }
+
+  .quick-links{
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  .section_faq-item p{
+    padding: 0;
   }
 }
 
