@@ -624,17 +624,20 @@ input[type="checkbox"] {
         transform: translateY(-50%) rotate(45deg); }
         .sidenav-main_header .close-btn span:last-of-type {
           transform: translateY(-50%) rotate(-45deg); }
-  .sidenav-main_content a {
-    font-size: 20px;
-    color: #666;
-    margin-bottom: 40px; }
-    .sidenav-main_content a:hover {
-      color: #ff4843;
-      text-decoration: none; }
-    .sidenav-main_content a.active {
-      color: #ff4843;
-      font-weight: 600;
-      text-decoration: underline; }
+  .sidenav-main_content {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; }
+    .sidenav-main_content a {
+      font-size: 20px;
+      color: #666;
+      margin-bottom: 40px; }
+      .sidenav-main_content a:hover {
+        color: #ff4843;
+        text-decoration: none; }
+      .sidenav-main_content a.active {
+        color: #ff4843;
+        font-weight: 600;
+        text-decoration: underline; }
 
 .header-main {
   background-color: #f7f7f7;
@@ -826,10 +829,44 @@ input[type="checkbox"] {
   font-weight: 300;
   padding-bottom: 1em; }
 
-.page-content .logo-grid .grid-elem {
+.page-content.logo-grid .filter-options {
+  position: sticky;
+  top: 0; }
+
+.page-content.logo-grid .filter-options_btn {
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: color 0.15s 0s ease-in-out; }
+  .page-content.logo-grid .filter-options_btn.active {
+    color: #ff4843; }
+
+.page-content.logo-grid .grid-elem {
+  margin-bottom: 30px; }
+
+.page-content.logo-grid .img-wrap {
+  position: relative;
+  background-color: #fff;
+  height: 150px;
   padding: 10px;
-  border: 1px solid #666;
-  width: 25%; }
+  border: 1px solid #d0d5d8; }
+  .page-content.logo-grid .img-wrap:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    border: 1px solid #d0d5d8;
+    z-index: 2; }
+  .page-content.logo-grid .img-wrap img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
 
 .page-content .quick-links {
   padding-left: 0;

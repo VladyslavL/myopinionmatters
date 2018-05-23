@@ -381,6 +381,9 @@ textarea{
     }
   }
   &_content{
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
     a{
       font-size: 20px;
       color: $text-color-secondary;
@@ -654,11 +657,49 @@ textarea{
     padding-bottom: 1em;
   }
 
-  .logo-grid{
+  &.logo-grid{
+    .filter-options{
+      position: sticky;
+      top: 0;
+    }
+    .filter-options_btn{
+      background-color: transparent;
+      border: none;
+      text-transform: uppercase;
+      font-weight: 300;
+      margin:10px 0;
+      cursor: pointer;
+      @include transition(color);
+      &.active{
+        color: $color-warn;
+      }
+
+    }
     .grid-elem{
+      margin-bottom: 30px;
+    }
+    .img-wrap{
+      position: relative;
+      background-color: #fff;
+      height: 150px;
       padding: 10px;
-      border: 1px solid $text-color-secondary;
-      width: 25%;
+      border: 1px solid $color-secondary;
+      &:after{
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        bottom: 10px;
+        right: 10px;
+        border: 1px solid $color-secondary;
+        z-index: 2;
+      }
+      img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
     }
   }
 
