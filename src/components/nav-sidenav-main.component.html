@@ -1,26 +1,49 @@
-<div class="nav-main text-color_white d-flex align-items-center">
-  <div class="container">
-    <div class="row">
-      <div class="col flex-grow-1 d-flex align-items-center">
-        <a href="/" class="logo d-flex">
-          <img src="images/icons/my_opinion_matters_logo.png" alt="">
-        </a>
-      </div>
-      <div class="col-auto d-flex align-items-center">
-        <div class="hamburger-btn default-hover sidenav-main-trigger">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        @@if (hideLoginbtn === false){
-          <a href="join.html" class="btn btn--clear btn--white d-md-block" hidden>
-            <b>Login</b>
+@@if (!context.isDashboardNav) {
+  <div class="nav-main is-fixed-nav text-color_white d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col flex-grow-1 d-flex align-items-center">
+          <a href="/" class="logo">
+            <img src="images/icons/my_opinion_matters_logo.png" alt="">
           </a>
-        }
+        </div>
+        <div class="col-auto d-flex align-items-center">
+          <div class="hamburger-btn default-hover sidenav-main-trigger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          @@if (context.hideLoginbtn === false){
+            <a href="join.html" class="btn btn--clear btn--white d-md-block" hidden>
+              <b>Login</b>
+            </a>
+          }
+        </div>
       </div>
     </div>
   </div>
-</div>
+}
+
+@@if (context.isDashboardNav === true) {
+  <div class="nav-main text-color_white d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col flex-grow-1 d-flex align-items-center">
+          <a href="/" class="logo">
+            <img src="images/icons/my_opinion_matters_logo_red.png" alt="">
+          </a>
+        </div>
+        <div class="col-auto d-flex align-items-center">
+          <div class="hamburger-btn default-hover sidenav-main-trigger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+}
 
 <div class="sidenav-main d-flex flex-column">
   <div class="sidenav-main_header d-flex align-items-center justify-content-end">

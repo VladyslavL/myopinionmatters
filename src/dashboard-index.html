@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('src/components/head.component.html', {
+  "page-title": "Home"
+})
+<body>
+  @@include('src/components/nav-sidenav-main.component.html',{
+    "isDashboardNav": true
+  })
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="panel-bodies text-align_center">
+          <div class="col-12">
+            <h3 class="text-transform_caps">My points</h3>
+            <hr>
+            <div class="progress-wrapper aspect-ratio_1x1"></div>
+            <p>Keep Going! You are <b>1000</b> Reward Points away from your next free Gift Card</p>
+            <div class="chevron-separator">
+              <div class="icon icon_chevron-bottom"></div>
+              <div class="icon icon_chevron-bottom"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9"></div>
+    </div>
+  </div>
+
+
+  <footer class="footer-main">
+    <div class="container">
+      <div class="row">
+        <nav class="footer-links d-flex flex-wrap mx-auto align-items-center text-align_center text-color_white">
+          <a href="#">About Us</a>
+          <a href="#">Rewards</a>
+          <a href="#">Terms and Conditions</a>
+          <a href="#">Policy</a>
+          <a href="#">Contact Us</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  @@include('src/components/scripts.component.html')
+</body>
+</html>

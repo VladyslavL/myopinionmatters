@@ -69,7 +69,7 @@ function showHidePassword() {
 
 showHidePassword();
 
-addClassOnScroll('nav-main', 'scrolled', 0)
+addClassOnScroll('is-fixed-nav', 'scrolled', 0)
 toggleClass('sidenav-main-trigger', 'sidenav-main', 'is-active');
 toggleClass('sidenav-main-trigger-close', 'sidenav-main', 'is-active');
 

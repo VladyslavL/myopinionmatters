@@ -237,6 +237,9 @@ textarea{
   &16x9{
     @include aspect-ratio(16, 9);
   }
+  &1x1{
+    @include aspect-ratio(1, 1);
+  }
 }
 
 .breadcrumbs{
@@ -279,7 +282,26 @@ textarea{
 }
 
 .icon{
+  position: relative;
   &_chevron-right{
+    &:before,
+    &:after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(calc(-50% + 0px), calc(-50% + 1px)) rotate(45deg);
+      transform-origin: right center;
+      width: 25px;
+      height: 4px;
+      background-color: #999;
+    }
+    &:after{
+      transform: translate(calc(-50% + 0px), calc(-50% - 1px)) rotate(-45deg);      
+    }
+  }
+
+  &_chevron-bottom{
     &:before,
     &:after{
       content: '';
@@ -312,13 +334,21 @@ textarea{
 
 // Nav main styles
 .nav-main{
+  position: relative;
   height: 65px;
   width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
   z-index: 11;
   @include transition(background-color);
+  &.is-fixed-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  &:not(.is-fixed-nav){
+    background-color: #fff;
+    color: $text-color-secondary;
+    box-shadow: -2px 9px 10px -8px rgba(100, 109, 118, 0.69);
+  }
   @media screen and (min-width: map-get($grid-breakpoints, md)){
     height: 100px;
   }  
@@ -326,10 +356,12 @@ textarea{
     background-color: rgba(100, 109, 118, 0.8);
   }
   .logo{
+    line-height: 1;
+
     img{
-      max-height: 28px;
+      max-width: 261px;
       @media screen and (min-width: map-get($grid-breakpoints, md)){
-        max-height: 36px;
+        max-width: 278px;
       }
     }
   }
@@ -745,6 +777,15 @@ textarea{
       margin: 0 5px;
     }
   }
+}
+
+/* Dashboard styles */
+.panel-bodies{
+  background-color: #fff; 
+  border: 1px solid #ccc;
+  border-radius: 0;
+  padding: 26px 25px;
+  margin-bottom: 20px;
 }
 
 @import 'vendor';
