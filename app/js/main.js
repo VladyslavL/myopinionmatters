@@ -30,13 +30,15 @@ var testimonialSlider = new Swiper ('.testimonial-slider', {
 
 function addClassOnScroll(elem, className, offset){
   var element = document.getElementsByClassName(elem)[0];
-  window.onscroll = function() {
-    if ( window.pageYOffset > offset) {
-        element.classList.add(className);
-        
-    } else {
-        element.classList.remove(className);
-        
+  if(element){
+    window.onscroll = function() {
+      if ( window.pageYOffset > offset) {
+          element.classList.add(className);
+          
+      } else {
+          element.classList.remove(className);
+          
+      }
     }
   }
 }
@@ -69,7 +71,7 @@ function showHidePassword() {
 
 showHidePassword();
 
-addClassOnScroll('nav-main', 'scrolled', 0)
+addClassOnScroll('is-transparent', 'scrolled', 0)
 toggleClass('sidenav-main-trigger', 'sidenav-main', 'is-active');
 toggleClass('sidenav-main-trigger-close', 'sidenav-main', 'is-active');
 
@@ -228,3 +230,19 @@ var Shuffle = window.Shuffle;
 	$(document).ready(init);
 
 })(jQuery);
+
+
+if(document.getElementsByClassName('progress-wrapper')[0]){
+  //Intialiazation 
+  var radialObj = radialIndicator('.progress-wrapper', {
+    minValue: 0,
+    maxValue: 2000,
+    initValue : 0,
+    barWidth : 2,
+    barColor : '#ff4843',
+    frameTime: 2
+  }); 
+
+  //Using Instance
+  radialObj.animate(radialObj.indOption.maxValue / 2);
+}

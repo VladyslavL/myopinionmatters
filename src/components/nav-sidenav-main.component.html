@@ -1,5 +1,5 @@
 @@if (!context.isDashboardNav) {
-  <div class="nav-main is-fixed-nav text-color_white d-flex align-items-center">
+  <div class="nav-main is-transparent text-color_white d-flex align-items-center">
     <div class="container">
       <div class="row">
         <div class="col flex-grow-1 d-flex align-items-center">
@@ -25,11 +25,11 @@
 }
 
 @@if (context.isDashboardNav === true) {
-  <div class="nav-main text-color_white d-flex align-items-center">
+  <div class="nav-main is-filled text-color_white d-flex align-items-center">
     <div class="container">
       <div class="row">
         <div class="col flex-grow-1 d-flex align-items-center">
-          <a href="/" class="logo">
+          <a href="dashboard-index.html" class="logo">
             <img src="images/icons/my_opinion_matters_logo_red.png" alt="">
           </a>
         </div>
@@ -53,12 +53,15 @@
     </div>
   </div>
   <nav class="sidenav-main_content d-flex flex-column align-items-center">
-    <a href="/" class="active">HOME</a>
-    <a href="about.html">ABOUT US</a>
-    <a href="rewards.html">REWARDS</a>
-    <a href="faq.html">FAQ</a>
-    <a href="news.html">NEWS</a>
-    <a href="contact-us.html">CONTACT US</a>
-    <a href="join.html">JOIN</a>
+    <a class="text-transform_caps" href="/" class="active">HOME</a>
+    <a class="text-transform_caps" href="about.html">ABOUT US</a>
+    <a class="text-transform_caps" href="rewards.html">REWARDS</a>
+    <a class="text-transform_caps" href="faq.html">FAQ</a>
+    <a class="text-transform_caps" href="news.html">NEWS</a>
+    <a class="text-transform_caps" href="contact-us.html">CONTACT US</a>
+    <a class="text-transform_caps" href="join.html">JOIN</a>
+    <a class="text-transform_caps" href="dashboard-index.html">Dashboard</a>
+    <a class="text-transform_caps" href="dashboard-surveys.html">My Surveys</a>
+    <a class="text-transform_caps" href="dashboard-rewards.html">My Rewards</a>
   </nav>
 </div>

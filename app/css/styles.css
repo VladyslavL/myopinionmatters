@@ -325,10 +325,6 @@ hr {
     height: 100%;
     width: 1px; }
 
-html,
-body {
-  overflow-x: hidden; }
-
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
@@ -476,6 +472,9 @@ h3, .h3 {
 .text-color_warn {
   color: #ff4843; }
 
+.position_relative {
+  position: relative; }
+
 input:not([type="checkbox"]),
 textarea {
   display: block;
@@ -512,6 +511,17 @@ input[type="checkbox"] {
     top: 0;
     left: 0; }
 
+.aspect-ratio_1x1 {
+  position: relative;
+  height: 0;
+  padding-bottom: 100%; }
+  .aspect-ratio_1x1 > .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+
 .breadcrumbs .breadcrumbs_item {
   position: relative; }
   .breadcrumbs .breadcrumbs_item a, .breadcrumbs .breadcrumbs_item p {
@@ -542,19 +552,34 @@ input[type="checkbox"] {
   background-color: #f0f0f0;
   border-radius: 100%; }
 
-.icon_chevron-right:before, .icon_chevron-right:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(calc(-50% + 0px), calc(-50% + 1px)) rotate(45deg);
-  transform-origin: right center;
-  width: 25px;
-  height: 4px;
-  background-color: #999; }
-
-.icon_chevron-right:after {
-  transform: translate(calc(-50% + 0px), calc(-50% - 1px)) rotate(-45deg); }
+.icon {
+  position: relative; }
+  .icon_chevron-right:before, .icon_chevron-right:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% + 0px), calc(-50% + 1px)) rotate(45deg);
+    transform-origin: right center;
+    width: 25px;
+    height: 4px;
+    background-color: #999; }
+  .icon_chevron-right:after {
+    transform: translate(calc(-50% + 0px), calc(-50% - 1px)) rotate(-45deg); }
+  .icon_chevron-bottom:before, .icon_chevron-bottom:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% - 1.5px), -50%) rotate(45deg);
+    transform-origin: bottom center;
+    width: 4px;
+    height: 15px;
+    background-color: #d0d5d8;
+    border-radius: 1px; }
+  .icon_chevron-bottom:after {
+    transform: translate(calc(-50% + 1.5px), -50%) rotate(-45deg);
+    transform-origin: bottom center; }
 
 .full-screen {
   min-height: 100vh;
@@ -567,6 +592,7 @@ input[type="checkbox"] {
       padding-top: 100px; } }
 
 .nav-main {
+  position: relative;
   height: 65px;
   width: 100%;
   position: fixed;
@@ -574,16 +600,23 @@ input[type="checkbox"] {
   left: 0;
   z-index: 11;
   transition: background-color 0.15s 0s ease-in-out; }
+  .nav-main.is-filled {
+    background-color: #fff;
+    color: #666;
+    box-shadow: 0 9px 10px -8px rgba(100, 109, 118, 0.69); }
   @media screen and (min-width: 768px) {
     .nav-main {
       height: 100px; } }
   .nav-main.scrolled {
     background-color: rgba(100, 109, 118, 0.8); }
-  .nav-main .logo img {
-    max-height: 28px; }
-    @media screen and (min-width: 768px) {
-      .nav-main .logo img {
-        max-height: 36px; } }
+  .nav-main .logo {
+    line-height: 1; }
+    .nav-main .logo img {
+      width: 100%;
+      max-width: 261px; }
+      @media screen and (min-width: 768px) {
+        .nav-main .logo img {
+          max-width: 278px; } }
 
 .sidenav-main {
   height: 100%;
@@ -829,10 +862,6 @@ input[type="checkbox"] {
   font-weight: 300;
   padding-bottom: 1em; }
 
-.page-content.logo-grid .filter-options {
-  position: sticky;
-  top: 0; }
-
 .page-content.logo-grid .filter-options_btn {
   background-color: transparent;
   border: none;
@@ -866,7 +895,8 @@ input[type="checkbox"] {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    max-width: calc(100% - 30px); }
 
 .page-content .quick-links {
   padding-left: 0;
@@ -894,7 +924,104 @@ input[type="checkbox"] {
   background-color: #646d76;
   padding: 10px 20px; }
   .footer-main .footer-links a {
-    margin: 0 5px; }
+    margin: 0 10px; }
+
+/* Dashboard styles */
+.content-wrap {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.panel-bodies {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-weight: 300; }
+  @media screen and (min-width: 991px) {
+    .panel-bodies {
+      padding: 25px; } }
+  .panel-bodies:not([class*="bg-color"]) {
+    background-color: #fff; }
+  .panel-bodies.side-box {
+    padding: 15px; }
+    .panel-bodies.side-box .panel-title {
+      font-size: 12px;
+      letter-spacing: 1px; }
+    .panel-bodies.side-box p {
+      font-weight: 300; }
+    .panel-bodies.side-box a {
+      font-size: 12px; }
+  .panel-bodies.link {
+    text-decoration: none;
+    transition: all 0.15s 0s ease-in-out; }
+    .panel-bodies.link:hover {
+      border-color: #ff4843; }
+    .panel-bodies.link p {
+      font-size: 12px;
+      letter-spacing: .2px; }
+  .panel-bodies.survey-panel .survey-panel_title {
+    font-size: 19px;
+    letter-spacing: .5px;
+    font-weight: 300; }
+  .panel-bodies.survey-panel .survey-panel_description {
+    font-size: 15px;
+    padding-bottom: 10px; }
+  .panel-bodies.survey-panel .survey-panel_bot {
+    font-size: 15px;
+    font-weight: 400; }
+  .panel-bodies.is-message {
+    border: none;
+    padding: 30px;
+    font-size: 20px; }
+    .panel-bodies.is-message.is-alert {
+      padding: 15px;
+      background-color: #fcf8e3; }
+  .panel-bodies .chevron-separator {
+    padding: 20px 0; }
+    .panel-bodies .chevron-separator .icon_chevron-bottom {
+      height: 10px; }
+  .panel-bodies .counter {
+    width: 50px;
+    font-size: 46px;
+    text-align: center;
+    font-weight: 300;
+    margin: 20px auto;
+    padding-top: 5px;
+    line-height: 65px;
+    background: url("../images/icons/my_surveys_clipboard_empty.png") no-repeat; }
+  .panel-bodies .panel-title {
+    font-size: 20px; }
+  .panel-bodies .progress-wrapper {
+    padding-bottom: 15px; }
+    .panel-bodies .progress-wrapper canvas {
+      width: 100% !important;
+      height: 100% !important; }
+  .panel-bodies img.width-50 {
+    width: 50px; }
+  .panel-bodies hr {
+    margin: 10px 0 15px; }
+  .panel-bodies .ticket-counter {
+    position: relative;
+    width: 55px;
+    min-width: 55px; }
+    .panel-bodies .ticket-counter_inner {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      font-size: 12px;
+      line-height: 1;
+      text-align: center; }
+      .panel-bodies .ticket-counter_inner p {
+        line-height: 1; }
+  .panel-bodies .large-text {
+    font-size: 20px;
+    margin-bottom: 20px; }
+    @media screen and (min-width: 768px) {
+      .panel-bodies .large-text .lead {
+        font-size: 21px; } }
 
 /**
  * Swiper 4.2.6
