@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('src/components/head.component.html', {
+  "page-title": "Home"
+})
+<body>
+  <div class="flex-column d-flex full-screen">
+    @@include('src/components/nav-sidenav-main.component.html',{
+      "isDashboardNav": true
+    })
+
+    <div class="flex flex-grow-1 nav-padding">
+      <div class="container content-wrap">
+        <div class="row">
+          <div class="col-12">
+            <div class="panel-bodies">
+              <h1 class="pb-3">My Settings</h1>
+
+              <form action="">
+                <div class="field">
+                  <label for=""><b>Email Address</b></label>
+                  <input type="email" placeholder="email@gmail.com" class="input--large">
+                </div>
+                <div class="field">
+                  <label for=""><b>Password</b></label>
+                  <div class="field password-field mb-0">
+                    <input type="password" placeholder="************" class="input--large password-input">
+                    <div class="input-icon right togglePassword">
+                      <img src="images/icons/hide.svg" alt="" class="icon-hide" hidden="">
+                      <img src="images/icons/view.svg" alt="" class="icon-show" hidden="">
+                    </div>
+                  </div>
+                  <p class="text-color_secondary pt-1">*Leave as is if you do not wish to change it.*</p>
+                </div>
+                <div class="field">
+                  <label for=""><b>Confirm Password</b></label>
+                  <div class="field password-field mb-0">
+                    <input type="password" placeholder="************" class="input--large password-input">
+                    <div class="input-icon right togglePassword">
+                      <img src="images/icons/hide.svg" alt="" class="icon-hide" hidden="">
+                      <img src="images/icons/view.svg" alt="" class="icon-show" hidden="">
+                    </div>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for=""><b>The amount of Survey Invitations I'd like to receive is:</b></label>
+                  <div class="row">
+                    <div class="col-md-4 field">
+                      <select name="" class="custom-select select--large">
+                        <option value="" selected="selected">Unlimited</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4 field">
+                      <select name="" class="custom-select select--large">
+                        <option value="" selected="selected">Per Day</option>
+                        <option value="">Per Week</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="field pt-2">
+                  <button type="submit" class="btn btn--red btn--large text-transform_caps">Save</button>
+                </div>
+                <div class="py-4">
+                  <a href="#" class="text-color_warn">I would like to delete my account.</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    @@include('src/components/footer.component.html')
+  </div>
+  
+
+  @@include('src/components/scripts.component.html')
+</body>
+</html>

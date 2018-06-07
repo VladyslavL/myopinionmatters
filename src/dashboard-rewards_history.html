@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include('src/components/head.component.html', {
-  "page-title": "Home"
+  "page-title": "Rewards history"
 })
 <body>
   <div class="flex-column d-flex full-screen">
@@ -38,22 +38,47 @@
             </div>
           </div>
           <div class="col-lg-9">
-            <div class="panel-bodies text-align_center">
-              <div class="col-lg-10 mx-auto py-5">
-                <h2 class="h1">No Prize Draw Available</h2>
-                <hr class="horizontal bg-color_secondary">
-                <p class="text-color_secondary"><b>Check back soon for the next prize draw!</b></p>
-              </div>
-            </div>
-
-            <div class="panel-bodies">
-              <div class="col-lg-10 mx-auto py-3">
-                <div class="row">
-                  <div class="col-md-7">
-                    <h3 class="text-transform_caps">WE'LL POST OUR WINNERS HERE:</h3>
+            <div class="row">
+              <div class="col-12">
+                <div class="panel-bodies is-message bg-color_warn text-color_white text-align_center">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <h2>Rewards History</h2>
+                    </div>
+                    <div class="col-md-4 pt-4 pt-md-0 d-flex justify-content-center align-items-center">
+                      <a href="#" class="btn btn--white btn--clear text-transform_caps">Your rewards</a>
+                    </div>
                   </div>
-                  <div class="col-md-5 text-align_center pt-5 pt-md-0">
-                    <h3 class="text-transform_caps">STAY TUNED!</h3>                    
+                </div>
+
+                <div class="panel-bodies">
+                  <div class="scrollable p-md-4">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Type</th>
+                          <th>Date</th>
+                          <th>Points</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Test</td>
+                          <td>23-05-2018</td>
+                          <td>500</td>
+                        </tr>
+                        <tr>
+                          <td>Test</td>
+                          <td>23-05-2018</td>
+                          <td>500</td>
+                        </tr>
+                        <tr>
+                          <td>Test</td>
+                          <td>23-05-2018</td>
+                          <td>500</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               </div>

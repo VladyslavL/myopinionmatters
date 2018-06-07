@@ -299,7 +299,7 @@ figure,
 blockquote {
   margin: 0; }
 
-button, a, input, textarea {
+button, a, input, textarea, select {
   outline: none; }
 
 a {
@@ -343,49 +343,6 @@ h3, .h3 {
   text-transform: uppercase;
   font-size: 16px; }
 
-.field {
-  margin-bottom: 10px; }
-  .field.with-icon {
-    background-color: #fff;
-    border-radius: 4px;
-    position: relative; }
-    .field.with-icon input {
-      padding-left: 48px;
-      position: relative;
-      z-index: 2;
-      background-color: transparent; }
-    .field.with-icon .input-icon {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      width: 48px;
-      height: 100%; }
-      .field.with-icon .input-icon.right {
-        left: auto;
-        right: 0; }
-      .field.with-icon .input-icon img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        max-width: 30px;
-        max-height: 27px; }
-  .field.password-field input {
-    padding-right: 48px; }
-    .field.password-field input[type="password"] ~ .togglePassword img.icon-hide {
-      display: block; }
-    .field.password-field input[type="text"] ~ .togglePassword img.icon-show {
-      display: block; }
-  .field.password-field .togglePassword {
-    z-index: 3;
-    cursor: pointer; }
-  .field label {
-    font-weight: 300;
-    letter-spacing: 0.6px;
-    padding: 10px 0;
-    display: block; }
-
 .btn {
   border-radius: 4px;
   color: #fff;
@@ -393,6 +350,7 @@ h3, .h3 {
   font-weight: 700;
   font-size: 12px;
   padding: 10px 17px;
+  min-width: 90px;
   border: 1px solid transparent;
   text-align: center;
   line-height: 1;
@@ -475,6 +433,85 @@ h3, .h3 {
 .position_relative {
   position: relative; }
 
+.scrollable {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
+
+table {
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+  border-spacing: 0;
+  min-width: 400px; }
+  table td, table th {
+    padding: 8px; }
+  table td {
+    border-top: 1px solid #ddd; }
+
+.field {
+  margin-bottom: 10px; }
+  .field.with-icon {
+    background-color: #fff;
+    border-radius: 4px;
+    position: relative; }
+    .field.with-icon input {
+      padding-left: 48px;
+      position: relative;
+      z-index: 2;
+      background-color: transparent; }
+    .field.with-icon .input-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 48px;
+      height: 100%; }
+      .field.with-icon .input-icon.right {
+        left: auto;
+        right: 0; }
+      .field.with-icon .input-icon img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 30px;
+        max-height: 27px; }
+  .field.password-field {
+    position: relative;
+    border-radius: 4px; }
+    .field.password-field input {
+      padding-right: 48px; }
+      .field.password-field input[type="password"] ~ .togglePassword img.icon-hide {
+        display: block; }
+      .field.password-field input[type="text"] ~ .togglePassword img.icon-show {
+        display: block; }
+    .field.password-field .togglePassword {
+      z-index: 5;
+      cursor: pointer; }
+    .field.password-field .input-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      width: 48px;
+      height: 100%; }
+      .field.password-field .input-icon.right {
+        left: auto;
+        right: 0; }
+      .field.password-field .input-icon img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 30px;
+        max-height: 27px; }
+  .field label {
+    font-weight: 300;
+    letter-spacing: 0.6px;
+    padding: 10px 0;
+    display: block; }
+
 input:not([type="checkbox"]),
 textarea {
   display: block;
@@ -499,6 +536,43 @@ input[type="checkbox"] {
   width: 20px;
   height: 20px;
   vertical-align: middle; }
+
+select.custom-select {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  min-width: 35px;
+  height: 35px;
+  border: 1px solid;
+  border-radius: 4px;
+  border-color: #d0d5d8;
+  position: relative;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("../images/icons/dropdown-arrow.png") no-repeat right 15px top 20px #fff; }
+  select.custom-select:focus {
+    border-color: #66afe9;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
+  select.custom-select.select--large {
+    height: 44px;
+    min-height: 44px; }
+  select.custom-select::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: block;
+    z-index: 2;
+    width: 0;
+    height: 0;
+    border-top: 4px solid #000;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    border-bottom: none; }
 
 .aspect-ratio_16x9 {
   position: relative;
@@ -972,7 +1046,6 @@ input[type="checkbox"] {
     font-weight: 400; }
   .panel-bodies.is-message {
     border: none;
-    padding: 30px;
     font-size: 20px; }
     .panel-bodies.is-message.is-alert {
       padding: 15px;
