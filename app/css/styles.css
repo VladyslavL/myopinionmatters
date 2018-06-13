@@ -325,6 +325,11 @@ hr {
     height: 100%;
     width: 1px; }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
@@ -350,7 +355,7 @@ h3, .h3 {
   font-weight: 700;
   font-size: 12px;
   padding: 10px 17px;
-  min-width: 90px;
+  min-width: 75px;
   border: 1px solid transparent;
   text-align: center;
   line-height: 1;
@@ -384,6 +389,9 @@ h3, .h3 {
   .btn--red {
     background-color: #ff4843;
     border-color: #ff4843; }
+  .btn--dark-red {
+    background-color: #e40800;
+    border-color: #e40800; }
   .btn--blue {
     background-color: #2650a9;
     border-color: #2650a9; }
@@ -449,6 +457,25 @@ table {
   table td {
     border-top: 1px solid #ddd; }
 
+.js-tabby .tabs-pane {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  border: 0;
+  width: 1px; }
+  .js-tabby .tabs-pane.active {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
+  .js-tabby .tabs-pane:focus {
+    outline: none; }
+
 .field {
   margin-bottom: 10px; }
   .field.with-icon {
@@ -511,6 +538,8 @@ table {
     letter-spacing: 0.6px;
     padding: 10px 0;
     display: block; }
+  .field p {
+    margin-bottom: 10px; }
 
 input:not([type="checkbox"]),
 textarea {
@@ -573,6 +602,30 @@ select.custom-select {
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
     border-bottom: none; }
+
+.custom-radio {
+  cursor: pointer;
+  padding-right: 20px; }
+  .custom-radio input[type="radio"] {
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -99999px;
+    opacity: 0; }
+    .custom-radio input[type="radio"]:checked + label span {
+      background-color: #ff4843; }
+  .custom-radio label span {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    margin: -1px 5px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 5px solid #fff;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+    transition: background-color 0.2s linear; }
 
 .aspect-ratio_16x9 {
   position: relative;
@@ -1095,6 +1148,33 @@ select.custom-select {
     @media screen and (min-width: 768px) {
       .panel-bodies .large-text .lead {
         font-size: 21px; } }
+
+.dashboard-tabs .tabs {
+  border: 1px solid #ccc;
+  border-bottom: none; }
+  .dashboard-tabs .tabs li {
+    height: 60px; }
+    .dashboard-tabs .tabs li.active a {
+      color: #ff4843; }
+    .dashboard-tabs .tabs li a {
+      padding: 20px;
+      position: relative; }
+      .dashboard-tabs .tabs li a:hover {
+        text-decoration: none;
+        color: #ff4843; }
+      @media screen and (min-width: 576px) {
+        .dashboard-tabs .tabs li a:not(.last-tab)::before, .dashboard-tabs .tabs li a:not(.last-tab)::after {
+          content: '';
+          border-right: 0;
+          border-left: solid 15px #ff4843;
+          border-top: solid 30px transparent;
+          border-bottom: solid 30px transparent;
+          position: absolute;
+          right: 0;
+          top: 0; }
+        .dashboard-tabs .tabs li a:not(.last-tab)::after {
+          border-left-color: white;
+          right: 2px; } }
 
 /**
  * Swiper 4.2.6

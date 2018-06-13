@@ -76,6 +76,7 @@ toggleClass('sidenav-main-trigger', 'sidenav-main', 'is-active');
 toggleClass('sidenav-main-trigger-close', 'sidenav-main', 'is-active');
 
 MicroModal.init();
+tabby.init();
 
 var Shuffle = window.Shuffle;
 

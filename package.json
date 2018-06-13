@@ -4,6 +4,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "Tabby": "github:cferdinandi/tabby",
     "autoprefixer": "*",
     "bootstrap-4-grid": "^2.4.0",
     "browser-sync": "*",

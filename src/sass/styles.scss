@@ -37,7 +37,7 @@ h3, .h3{
   font-weight: 700;
   font-size: 12px;
   padding: 10px 17px;
-  min-width: 90px;
+  min-width: 75px;
   border: 1px solid transparent;
   text-align: center;
   line-height: 1;
@@ -80,6 +80,10 @@ h3, .h3{
   &--red{
     background-color: $color-warn;
     border-color: $color-warn
+  }
+  &--dark-red{
+    background-color: #e40800;
+    border-color: #e40800;
   }
   &--blue{
     background-color: #2650a9;
@@ -176,6 +180,30 @@ table{
   }
 }
 
+.js-tabby{ 
+  .tabs-pane {
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    border: 0;
+    width: 1px;
+    &.active {
+      clip: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      position: static;
+      width: auto;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
 .field{
   margin-bottom: 10px;
   &.with-icon{
@@ -252,6 +280,10 @@ table{
     padding: 10px 0;
     display: block;
   }
+
+  p{
+    margin-bottom: 10px;
+  }
 }
 
 input:not([type="checkbox"]),
@@ -320,6 +352,42 @@ select.custom-select{
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
     border-bottom: none;
+  }
+}
+
+.custom-radio{
+  cursor: pointer;
+  padding-right: 20px;
+  input[type="radio"]{
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -99999px;
+    opacity: 0;
+    // visibility: hidden;
+    &:checked{
+      & + label{
+        span{
+          background-color: $color-warn;
+        }
+      }
+    }
+  }
+
+  label{
+    span{
+      display: inline-block;
+      width: 23px;
+      height: 23px;
+      margin: -1px 5px 0 0;
+      vertical-align: middle;
+      cursor: pointer;
+      border-radius: 50%;
+      background-color: #fff;
+      border: 5px solid #fff;
+      box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
+      transition: background-color 0.2s linear;
+    }
   }
 }
 
@@ -1002,6 +1070,49 @@ select.custom-select{
     @media screen and (min-width: map-get($grid-breakpoints, md)){
       .lead {
           font-size: 21px;
+      }
+    }
+  }
+}
+
+.dashboard-tabs{
+  .tabs{
+    border: 1px solid #ccc;
+    border-bottom: none;
+    li{
+      height: 60px;
+      &.active{
+        a{
+          color: $color-warn;
+        }
+      }
+      a{
+        padding: 20px;
+        position: relative;
+        &:hover{
+          text-decoration: none;
+          color: $color-warn;
+        }
+        @media screen and (min-width: 576px){
+          &:not(.last-tab){
+            &::before,
+            &::after{
+              content: '';
+              border-right: 0;
+              border-left: solid 15px $color-warn;
+              border-top: solid 30px transparent;
+              border-bottom: solid 30px transparent;
+              position: absolute;
+              right: 0;
+              top: 0;
+            }
+
+            &::after{
+              border-left-color: white;
+              right: 2px;
+            }
+          }
+        }
       }
     }
   }
