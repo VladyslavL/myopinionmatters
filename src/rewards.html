@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('src/components/head.component.html', {
+  "page-title": "Rewards"
+})
+<body>
+  @@include('src/components/nav-sidenav-main.component.html',{
+    "hideLoginbtn": false
+  })
+  
+  @@include('src/components/header-main.component.html', {
+    "showHeaderVideoLink": true,
+    "classes": "header-main--two-columns"
+  })
+
+  <section class="page-content logo-grid initiate-shuffle-js" shuffle-id="1">
+    <div class="container bg-color_white">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="text-align_center"><b><span class="d-block">Check out all the free Gift Cards</span><span class="d-block">you can enjoy!</span></b></h2>
+        </div>
+        <div class="col-12 bg-color_white filter-options pb-3 pt-2 d-flex flex-wrap justify-content-center">
+          <button class="filter-options_btn" data-group="*">All</button>
+          <button class="filter-options_btn" data-group="supermarkets">Supermarkets</button>
+          <button class="filter-options_btn" data-group="entertainment">ENTERTAINMENT</button>
+          <button class="filter-options_btn" data-group="depstores">DEPARTMENT STORES</button>
+          <button class="filter-options_btn" data-group="fashion">fashion</button>
+          <button class="filter-options_btn" data-group="sports">Sports</button>
+        </div>
+        <div class="w-100 grid my-shuffle-container">
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem entertainment"><figure class="img-wrap"><img src="images/rewards_logos/1.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem depstores"><figure class="img-wrap"><img src="images/rewards_logos/2.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem fashion"><figure class="img-wrap"><img src="images/rewards_logos/3.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem depstores"><figure class="img-wrap"><img src="images/rewards_logos/4.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem depstores"><figure class="img-wrap"><img src="images/rewards_logos/5.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem"><figure class="img-wrap"><img src="images/rewards_logos/6.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem depstores"><figure class="img-wrap"><img src="images/rewards_logos/7.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem"><figure class="img-wrap"><img src="images/rewards_logos/8.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem supermarkets"><figure class="img-wrap"><img src="images/rewards_logos/9.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem sports"><figure class="img-wrap"><img src="images/rewards_logos/10.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem fashion"><figure class="img-wrap"><img src="images/rewards_logos/11.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem depstores"><figure class="img-wrap"><img src="images/rewards_logos/12.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem entertainment"><figure class="img-wrap"><img src="images/rewards_logos/13.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem sports"><figure class="img-wrap"><img src="images/rewards_logos/14.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem supermarkets"><figure class="img-wrap"><img src="images/rewards_logos/15.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem"><figure class="img-wrap"><img src="images/rewards_logos/16.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem entertainment"><figure class="img-wrap"><img src="images/rewards_logos/17.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem entertainment"><figure class="img-wrap"><img src="images/rewards_logos/18.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem sports fashion depstores entertainment supermarkets"><figure class="img-wrap"><img src="images/rewards_logos/19.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem fashion"><figure class="img-wrap"><img src="images/rewards_logos/20.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem fashion"><figure class="img-wrap"><img src="images/rewards_logos/21.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem supermarkets"><figure class="img-wrap"><img src="images/rewards_logos/22.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem supermarkets"><figure class="img-wrap"><img src="images/rewards_logos/23.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem fashion"><figure class="img-wrap"><img src="images/rewards_logos/24.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem fashion"><figure class="img-wrap"><img src="images/rewards_logos/25.png" alt=""></figure></div>
+          <div class="col-lg-3 col-md-4 col-sm-6 grid-elem fashion"><figure class="img-wrap"><img src="images/rewards_logos/26.png" alt=""></figure></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @@include('src/components/footer.component.html')
+
+  @@include('src/components/scripts.component.html')
+</body>
+</html>

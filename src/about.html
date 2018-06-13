@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('src/components/head.component.html', {
+  "page-title": "About Us"
+})
+<body>
+  @@include('src/components/nav-sidenav-main.component.html',{
+    "hideLoginbtn": false
+  })
+  
+  @@include('src/components/header-main.component.html', {
+    "showHeaderVideoLink": false,
+    "classes": ""
+  })
+
+  <section class="page-content">
+    <div class="container bg-color_white pb-5">
+      <div class="row">
+        <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+          <h1 class="text-align_center">About Us</h1>
+          <h2>Who are we?</h2>
+          <p><i>MyOpinionMatters</i> is Ireland's leading market research community. Made up of thousands of men and women just lik <i>MyOpinionMattersers</i> allows people from all over Ireland to participate in surveys and in return get paid for their opinions - as well as having the opportunity to help shape the products and services that companies provide.</p>
+          <p><i>MyOpinionMatters</i> is owned and operated by Empathy Research Limited, a market research company incorporated in Ireland under the registered company number 545528.</p>
+          <p>Our mission at Empathy Research is to provide a definitive view on the thoughts of people living in Ireland across a range of matters. We couldn't do this without the members of our <i>MyOpinionMatters</i> Community and we endeavour to ensure that our members' time is always respected and valued.</p>
+          <p>Similarly, we endeavour to ensure that the research we conduct on behalf of our partners is robust and of the highest quality. To do this, we employ best-in-class technology and processes to ensure that all members are ethical and their contributions valid.</p>
+          <h2>How does it work?</h2>
+          <div class="embed-responsive-16by9 embed-responsive">
+            <iframe src="https://player.vimeo.com/video/237874977" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <h3>Rewards</h3>
+          <p>Your opinion is fundamental to the success of <i>MyOpinionMatters</i> and our ability to provide a definitive view on the thoughts of people living in Ireland across a range of matters. So it's only fair that your opinion gets rewarded!</p>
+          <p>Once successfully registered, you will receive email invitations to complete surveys online. For every survey you complete, your <i>MyOpinionMatters</i> account will be credited with a pre-determined amount of survey points. The amount of points being offered per survey will be highlighted in the email invitation sent to you and you can check your points balance at any stage via your membership account.</p>
+          <p>The amount of points you receive for completing each survey will depend on factors such as the length of the survey or the topic being covered. On average this will range between 50-200 points which equates to €0.50 - €2 per survey, which you can then redeem for free gift cards from some of your favourite retailers and brands which you can find <a href="rewards.html" class="text-color_warn">here</a>. It couldn't be easier!</p>
+          <div class="col-sm-8 col-md-6 mx-auto pt-5">
+            <a href="join.html" class="btn btn--large btn--red d-block">JOIN NOW AND GET 500 FREE POINTS!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @@include('src/components/footer.component.html')
+  @@include('src/components/scripts.component.html')
+</body>
+</html>

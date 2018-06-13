@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('src/components/head.component.html', {
+  "page-title": "Join"
+})
+<body>
+  @@include('src/components/nav-sidenav-main.component.html',{
+    "hideLoginbtn": true
+  })
+
+  <div class="full-screen d-flex align-items-center nav-padding pb-5 bg-cover" style="background-image: url('./images/header-images/02_home_image.jpg')">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          @@include('src/components/signup-panel.component.html')
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  @@include('src/components/scripts.component.html')
+
+</body>
+</html>

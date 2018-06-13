@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('src/components/head.component.html', {
+  "page-title": "Contact Us"
+})
+<body>
+  @@include('src/components/nav-sidenav-main.component.html',{
+    "hideLoginbtn": false
+  })
+  
+  @@include('src/components/header-main.component.html', {
+    "showHeaderVideoLink": false,
+    "classes": ""
+  })
+
+  <section class="page-content">
+    <div class="container bg-color_white pb-5">
+      <div class="row">
+        <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+          <h1 class="text-align_center">Contact Us</h1>
+          <p>If you have any questions or feedback we'd love to hear from you! If you have a question, be sure to check out our FAQ section before contacting us as it may already contain the answer to your question!</p>
+          <p>If you are having a problem with a particular survey, please include as much detail as possible in your comments. This should include the survey link you received and survey number (if provided) along with any other information you want to add.</p>
+        </div>
+        <form action="" class=" col-sm-10 col-md-8 col-lg-6 mx-auto pt-3">
+          <div class="field">
+            <input type="text" placeholder="Name">
+          </div>
+          <div class="field">
+            <input type="email" placeholder="Email Address">
+          </div>
+          <div class="field">
+            <textarea rows="4" placeholder="Comments"></textarea>
+          </div>
+          <div class="field">
+            <label for="">If you need to send a screenshot please attach it here</label>
+            <input type="file" accept="image/*">
+          </div>
+          <div class="field pt-3">
+            <button type="submit" class="btn btn--large btn--red d-block">Submit ›</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  @@include('src/components/footer.component.html')
+  @@include('src/components/scripts.component.html')
+  
+</body>
+</html>

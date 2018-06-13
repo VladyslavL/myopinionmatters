@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('src/components/head.component.html', {
+  "page-title": "News"
+})
+<body>
+  @@include('src/components/nav-sidenav-main.component.html',{
+    "hideLoginbtn": false
+  })
+  
+  @@include('src/components/header-main.component.html', {
+    "showHeaderVideoLink": false,
+    "classes": ""
+  })
+
+  <section class="page-content">
+    <div class="container-fluid bg-color_white">
+      <h1 class="text-align_center">News</h1>
+    </div>
+
+    <div class="news-container pt-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-4 d-flex">
+            <a href="news-post.html" class="news-item bg-color_white no-underline d-flex flex-fill vertical flex-column  w-100">
+              <div class="news-item_poster">
+                <div class="aspect-ratio_16x9">
+                  <div class="content">
+                    <img src="images/header-images/01_home_image.jpg" alt="" class="img-cover d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="news-item_name">
+                <h3 class="col-12">Welcome to MyOpinionMatters!</h3>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 d-flex">
+            <a href="news-post.html" class="news-item bg-color_white no-underline d-flex flex-fill vertical flex-column  w-100">
+              <div class="news-item_poster">
+                <div class="aspect-ratio_16x9">
+                  <div class="content">
+                    <img src="images/header-images/02_home_image.jpg" alt="" class="img-cover d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="news-item_name">
+                <h3 class="col-12">This is how much Irish Kids are getting for their Communion</h3>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 d-flex">
+            <a href="news-post.html" class="news-item bg-color_white no-underline d-flex flex-fill vertical flex-column  w-100">
+              <div class="news-item_poster">
+                <div class="aspect-ratio_16x9">
+                  <div class="content">
+                    <img src="images/header-images/01_home_image.jpg" alt="" class="img-cover d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="news-item_name">
+                <h3 class="col-12">62% of young Irish Adults would consider an Apprenticeship</h3>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 d-flex">
+            <a href="news-post.html" class="news-item bg-color_white no-underline d-flex flex-fill vertical flex-column  w-100">
+              <div class="news-item_poster">
+                <div class="aspect-ratio_16x9">
+                  <div class="content">
+                    <img src="images/header-images/02_home_image.jpg" alt="" class="img-cover d-block">
+                  </div>
+                </div>
+              </div>
+              <div class="news-item_name">
+                <h3 class="col-12">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  @@include('src/components/footer.component.html')
+
+  @@include('src/components/scripts.component.html')
+
+</body>
+</html>

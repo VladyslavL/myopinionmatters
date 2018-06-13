@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home | MyOpinionMatters</title>
+  <!-- styles -->
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700" rel="stylesheet">
+</head>
+<body>
+  <div class="flex-column d-flex full-screen">
+    
+
+
+  <div class="nav-main is-filled text-color_white d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col flex-grow-1 d-flex align-items-center">
+          <a href="dashboard-index.html" class="logo">
+            <img src="images/icons/my_opinion_matters_logo_red.png" alt="">
+          </a>
+        </div>
+        <div class="col-auto d-flex align-items-center">
+          <div class="hamburger-btn default-hover sidenav-main-trigger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="sidenav-main d-flex flex-column">
+  <div class="sidenav-main_header d-flex align-items-center justify-content-end">
+    <div class="close-btn default-hover sidenav-main-trigger-close">
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <nav class="sidenav-main_content d-flex flex-column align-items-center">
+    <a class="text-transform_caps" href="/" class="active">HOME</a>
+    <a class="text-transform_caps" href="about.html">ABOUT US</a>
+    <a class="text-transform_caps" href="rewards.html">REWARDS</a>
+    <a class="text-transform_caps" href="faq.html">FAQ</a>
+    <a class="text-transform_caps" href="news.html">NEWS</a>
+    <a class="text-transform_caps" href="contact-us.html">CONTACT US</a>
+    <a class="text-transform_caps" href="join.html">JOIN</a>
+    <a class="text-transform_caps" href="dashboard-index.html">Dashboard</a>
+    <a class="text-transform_caps" href="dashboard-surveys.html">My Surveys</a>
+    <a class="text-transform_caps" href="dashboard-rewards.html">My Rewards</a>
+    <a class="text-transform_caps" href="dashboard-rewards_history.html">My Rewards History</a>
+    <a class="text-transform_caps" href="dashboard-prizes.html">My Prizes</a>
+    <a class="text-transform_caps" href="dashboard-settings.html">My Settings</a>
+    <a class="text-transform_caps" href="dashboard-profile.html">My Profile</a>
+  </nav>
+</div>
+
+    <div class="flex flex-grow-1 nav-padding">
+      <div class="container content-wrap">
+        <div class="row">
+          <div class="col-12">
+            <div class="panel-bodies">
+              <h1 class="pb-3">My Settings</h1>
+
+              <form action="">
+                <div class="field">
+                  <label for=""><b>Email Address</b></label>
+                  <input type="email" placeholder="email@gmail.com" class="input--large">
+                </div>
+                <div class="field">
+                  <label for=""><b>Password</b></label>
+                  <div class="field password-field mb-0">
+                    <input type="password" placeholder="************" class="input--large password-input">
+                    <div class="input-icon right togglePassword">
+                      <img src="images/icons/hide.svg" alt="" class="icon-hide" hidden="">
+                      <img src="images/icons/view.svg" alt="" class="icon-show" hidden="">
+                    </div>
+                  </div>
+                  <p class="text-color_secondary pt-1">*Leave as is if you do not wish to change it.*</p>
+                </div>
+                <div class="field">
+                  <label for=""><b>Confirm Password</b></label>
+                  <div class="field password-field mb-0">
+                    <input type="password" placeholder="************" class="input--large password-input">
+                    <div class="input-icon right togglePassword">
+                      <img src="images/icons/hide.svg" alt="" class="icon-hide" hidden="">
+                      <img src="images/icons/view.svg" alt="" class="icon-show" hidden="">
+                    </div>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for=""><b>The amount of Survey Invitations I'd like to receive is:</b></label>
+                  <div class="row">
+                    <div class="col-md-4 field">
+                      <select name="" class="custom-select select--large">
+                        <option value="" selected="selected">Unlimited</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4 field">
+                      <select name="" class="custom-select select--large">
+                        <option value="" selected="selected">Per Day</option>
+                        <option value="">Per Week</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="field pt-2">
+                  <button type="submit" class="btn btn--red btn--large text-transform_caps">Save</button>
+                </div>
+                <div class="py-4">
+                  <a href="#" class="text-color_warn">I would like to delete my account.</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="footer-main">
+  <div class="container">
+    <div class="row">
+      <nav class="footer-links d-flex flex-wrap mx-auto align-items-center justify-content-center text-align_center text-color_white">
+        <a href="#">About Us</a>
+        <a href="#">Rewards</a>
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Policy</a>
+        <a href="#">Contact Us</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+  </div>
+  
+
+  <!-- <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="js/vendor.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

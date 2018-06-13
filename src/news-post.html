@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('src/components/head.component.html', {
+  "page-title": "News Post"
+})
+<body>
+  @@include('src/components/nav-sidenav-main.component.html',{
+    "hideLoginbtn": false
+  })
+  
+  @@include('src/components/header-main.component.html', {
+    "showHeaderVideoLink": false,
+    "classes": ""
+  })
+
+  <section class="page-content">
+    <div class="container bg-color_white pb-5">
+      <div class="row">
+        <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+          <div class="breadcrumbs d-flex py-3">
+            <div class="breadcrumbs_item">
+              <a href="/" class="text-color_warn">Home</a>
+            </div>
+
+            <div class="breadcrumbs_item">
+              <a href="news.html" class="text-color_warn">News</a>
+            </div>
+
+            <div class="breadcrumbs_item">
+              <p>News single post</p>
+            </div>
+          </div>
+          <div class="page-content_poster aspect-ratio_16x9">
+            <div class="content">
+              <img src="images/header-images/02_home_image.jpg" class="img-cover" alt="">
+            </div>
+          </div>
+          <h1 class="text-align_center">Welcome to MyOpinionMatters!</h1>
+          <p>Today, we are delighted to launch our shiny new website and welcome all our new members. <i>MyOpinionMatters</i> is Ireland's leading market research company and by signing up you are joining a community of thousands of people from every walk of life, across the country.</p>
+          <p>We look forward to sending you fun and engaging surveys on everything from your favourite brands, current affairs, new trends or even advance looks at advertising campaigns.</p>
+          <p>Our mission at <i>MyOpinionMatters</i> is to get your opinion on all these things, and we promise to make it worth your while by giving you Reward Points, which can be exchanged for Gift Cards or else used to buy tickets for bigger, more extravagant prizes like hotel breaks or even flights abroad.</p>
+          <p>Your opinion is fundamental to the success of <i>MyOpinionMatters</i> so here are a few extra hints and tips to help you get the most out of it.</p>
+          <ol>
+            <li>
+              <p><b>Don't leave us hanging:</b> Surveys are usually only open for a few days, and we often start closing them gradually as we get enough replies from certain ages/genders. Act quick to make sure your voice is heard and you get your Reward Points.</p>
+            </li>
+            <li>
+              <p><b>Try every survey</b>: Even if you do not qualify for a specific survey, we will enter you into a monthly draw for free €20 Gift Cards just for making the attempt. The more survey's you try, the more entries you get!</p>
+            </li>
+            <li>
+              <p><b>Get your Prize Draw Ticket</b>: Every few weeks, a lucky member of the community will win one of our big prizes, to celebrate the launch of our new website we are offering a €500 voucher of your choice. The only way to enter is to use Reward Points to purchase tickets but you can buy as many tickets as you like, and each one increases your winning chances.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @@include('src/components/footer.component.html')
+
+  @@include('src/components/scripts.component.html')
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('src/components/head.component.html', {
+  "page-title": "Rewards history"
+})
+<body>
+  <div class="flex-column d-flex full-screen">
+    @@include('src/components/nav-sidenav-main.component.html',{
+      "isDashboardNav": true
+    })
+
+    <div class="flex flex-grow-1 nav-padding">
+      <div class="container content-wrap">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="panel-bodies side-box text-align_center">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6 col-lg-12">
+                    <h3 class="panel-title text-transform_caps"><b>My points</b></h3>
+                    <hr class="horizontal bg-color_secondary">
+                    <div class="progress-wrapper col-md-6 col-lg-10 mx-auto"></div>
+                    <p>Keep Going! You are <b>1000</b> Reward Points away from your next free Gift Card</p>
+                    <div class="chevron-separator d-none d-lg-block">
+                      <div class="icon icon_chevron-bottom"></div>
+                      <div class="icon icon_chevron-bottom"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-lg-12">
+                    <h3 class="panel-title text-transform_caps"><b>MY SURVEYS</b></h3>
+                    <hr class="horizontal bg-color_secondary">
+                    <div class="counter">9</div>
+                    <a href="#" class="text-transform_caps text-color_warn"><b>TAKE MORE SURVEYS &#8250;</b></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-9">
+            <div class="row">
+              <div class="col-12">
+                <div class="panel-bodies is-message bg-color_warn text-color_white text-align_center">
+                  <div class="row">
+                    <div class="col-md-8">
+                      <h2>Rewards History</h2>
+                    </div>
+                    <div class="col-md-4 pt-4 pt-md-0 d-flex justify-content-center align-items-center">
+                      <a href="#" class="btn btn--white btn--clear text-transform_caps">Your rewards</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel-bodies">
+                  <div class="scrollable p-md-4">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Type</th>
+                          <th>Date</th>
+                          <th>Points</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Test</td>
+                          <td>23-05-2018</td>
+                          <td>500</td>
+                        </tr>
+                        <tr>
+                          <td>Test</td>
+                          <td>23-05-2018</td>
+                          <td>500</td>
+                        </tr>
+                        <tr>
+                          <td>Test</td>
+                          <td>23-05-2018</td>
+                          <td>500</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    @@include('src/components/footer.component.html')
+  </div>
+  
+
+  @@include('src/components/scripts.component.html')
+</body>
+</html>

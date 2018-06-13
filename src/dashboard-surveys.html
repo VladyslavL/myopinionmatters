@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('src/components/head.component.html', {
+  "page-title": "Home"
+})
+<body>
+  <div class="flex-column d-flex full-screen">
+    @@include('src/components/nav-sidenav-main.component.html',{
+      "isDashboardNav": true
+    })
+
+    <div class="flex flex-grow-1 nav-padding">
+      <div class="container content-wrap">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="panel-bodies side-box text-align_center">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6 col-lg-12">
+                    <h3 class="panel-title text-transform_caps"><b>My points</b></h3>
+                    <hr class="horizontal bg-color_secondary">
+                    <div class="progress-wrapper col-md-6 col-lg-10 mx-auto"></div>
+                    <p>Keep Going! You are <b>1000</b> Reward Points away from your next free Gift Card</p>
+                    <div class="chevron-separator d-none d-lg-block">
+                      <div class="icon icon_chevron-bottom"></div>
+                      <div class="icon icon_chevron-bottom"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-6 col-lg-12">
+                    <h3 class="panel-title text-transform_caps"><b>MY SURVEYS</b></h3>
+                    <hr class="horizontal bg-color_secondary">
+                    <div class="counter">9</div>
+                    <a href="#" class="text-transform_caps text-color_warn"><b>TAKE MORE SURVEYS &#8250;</b></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-9">
+            <div class="row">
+              <div class="col-12">
+                <div class="panel-bodies is-message bg-color_warn text-color_white text-align_center">
+                  <h2>Can We Pick Your Brain?</h2>
+                </div>
+
+                <div class="panel-bodies">
+                  <p class="large-text">Here you will find all the latest surveys available. Take as many as you can to earn Reward Points, and get closer to your next free Gift Card!</p>
+
+                  <div class="panel-bodies is-message is-alert text-align_center">
+                    <p>No surveys available</p>
+                  </div>
+
+                  <a href="#" class="panel-bodies survey-panel link">
+                    <div class="row">
+                      <div class="col-sm-2 mx-auto d-flex align-items-center justify-content-center">
+                        <div>
+                          <img src="images/icons/my_surveys.png" class="width-50" alt="">
+                        </div>
+                      </div>
+                      <div class="col-sm-8">
+                        <h3 class="survey-panel_title text-color_warn text-transform_caps">ID56</h3>
+                        <p class="survey-panel_description">Short Survey on Parenthood.</p>
+                        <p class="survey-panel_bot">
+                          <span class="text-color_warn">Points:</span>
+                          <span>50 Points</span>
+                        </p>
+                      </div>
+                      <div class="col-sm-2 d-none mx-auto d-sm-flex align-items-center justify-content-center">
+                        <div>
+                          <img src="images/icons/arrow.png" class="width-50" alt="">                      
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    @@include('src/components/footer.component.html')
+  </div>
+  
+
+  @@include('src/components/scripts.component.html')
+</body>
+</html>

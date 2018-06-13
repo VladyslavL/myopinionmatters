@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('src/components/head.component.html', {
+  "page-title": "FAQ"
+})
+<body>
+  @@include('src/components/nav-sidenav-main.component.html',{
+    "hideLoginbtn": false
+  })
+  
+  @@include('src/components/header-main.component.html', {
+    "showHeaderVideoLink": false,
+    "classes": ""
+  })
+
+  <section class="page-content">
+    <div class="container bg-color_white pb-5">
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <h1 class="text-align_center">FAQ</h1>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <a href="#" class="section_faq-item no-underline d-flex align-items-center default-hover">
+                  <img src="images/icons/faq_general_questions.png" alt="">
+                  <p>General Questions</p>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="#" class="section_faq-item no-underline d-flex align-items-center default-hover">
+                  <img src="images/icons/faq_points.png" alt="">
+                  <p>Points & Rewards</p>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="#" class="section_faq-item no-underline d-flex align-items-center default-hover">
+                  <img src="images/icons/faq_registration.png" alt="">
+                  <p>Registration</p>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="#" class="section_faq-item no-underline d-flex align-items-center default-hover">
+                  <img src="images/icons/faq_details.png" alt="">
+                  <p>My Details</p>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="#" class="section_faq-item no-underline d-flex align-items-center default-hover">
+                  <img src="images/icons/faq_surveys.png" alt="">
+                  <p>Surveys</p>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a href="#" class="section_faq-item no-underline d-flex align-items-center default-hover">
+                  <img src="images/icons/faq_support.png" alt="">
+                  <p>Support</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <hr class="horizontal bg-color_secondary mt-4">        
+        </div>
+        <div class="col-md-10 mx-auto">
+          <h2>General</h2>
+          <ul class="quick-links text-color_warn">
+            <li><p><a href="#What-is-MyOpinionMatters">What is MyOpinionMatters?</p></a></li>
+            <li><p><a href="#Who-is-Empathy-Research">Who is Empathy Research?</p></a></li>
+            <li><p><a href="#Why-should-I-join-the-MyOpinionMatters-community">Why should I join the MyOpinionMatters community?</p></a></li>
+          </ul>
+          <h2 id="What-is-MyOpinionMatters">What is MyOpinionMatters?</h2>
+          <p>MyOpinionMatters is Ireland's leading market research community. Made up of thousands of men and women just like you, of all ages and from all over the country, MyOpinionMatters provides a definitive view on what Ireland thinks by asking people like you to share your thoughts and opinions on a range of matters - from the products and services you like, to current affairs, new trends, advertising campaigns and everything in between. All while earning points which can be converted into free gift cards from a range of brands you know and love or if you prefer, you can donate your earnings to a good cause or charity.</p>
+          <h2 id="Who-is-Empathy-Research">Who is Empathy Research?</h2>
+          <p>Empathy Research Ltd. is a leading online research and community management specialist who owns and runs the MyOpinionMatters community. Empathy Research works with a wide range of clients including many well-known brands and services to provide valuable thoughts and opinions from people like you. For further information about Empathy Research, please visit the <a href="about.html" class="text-color_warn">About Us</a> section.</p>
+          <h2 id="Why-should-I-join-the-MyOpinionMatters-community">Why should I join the MyOpinionMatters community?</h2>
+          <p>Enjoy the benefits of taking part in Ireland's leading research community by:</p>
+          <ul>
+            <li>
+              <p>Getting free gift cards for your opinion - MyOpinionMatters members get rewarded for every survey completed and can choose from a wide range of <a href="rewards.html">Reward Partners</a></p>
+            </li>
+            <li>
+              <p>Helping shape the world around you - as a MyOpinionMatters member, your contributions through surveys greatly influence brands and organisations and help them improve their products & services</p>
+            </li>
+            <li>
+              <p>Being in the know & having fun - as a member of the MyOpinionMattersCommunity, you will be the first to review new products, services and advertising campaigns & we promise to make it fun along the way!</p>
+            </li>
+          </ul>
+          <div class="text-align_center pt-4">
+            <a href="join.html" class="btn btn--red btn--large d-inline-block">Join now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  @@include('src/components/footer.component.html')
+  @@include('src/components/scripts.component.html')
+
+</body>
+</html>

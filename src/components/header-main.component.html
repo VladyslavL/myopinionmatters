@@ -1,0 +1,25 @@
+<div class="header-main @@classes bg-cover d-flex bg-cover align-items-center" style="background-image: url('./images/header-images/01_home_image.jpg')">
+  <div class="container header-main_content">
+    <div class="row">
+      <section class="col-lg-6 nav-padding text-align_center text-color_white d-flex align-items-center bg-cover header-main_mask"
+      style="background-image: url('./images/header-images/01_home_image.jpg')">
+      @@if (context.showHeaderVideoLink === true){
+        <div class="col-sm-9 mx-auto">
+          <h1 class="header-main_title text-transform_caps">Get Free Gift Cards For Your Opinions</h1>
+          <a href="#" class="d-block no-underline default-hover" data-micromodal-trigger="modal-1">
+            <img src="images/icons/play_button.png" alt="">
+            <p>Find out how it works</p>
+          </a>
+        </div>
+      }
+      </section>
+      <div class="col-lg-6 nav-padding">
+        @@include('src/components/signup-panel.component.html')
+      </div>
+    </div>
+  </div>
+</div>
+
+@@if (context.showHeaderVideoLink === true){
+  @@include('src/components/modal-video.component.html')  
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('src/components/head.component.html', {
+  "page-title": "Home"
+})
+<body>
+  @@include('src/components/nav-sidenav-main.component.html',{
+    "hideLoginbtn": false
+  })
+  
+  @@include('src/components/header-main.component.html', {
+    "showHeaderVideoLink": true,
+    "classes": "header-main--two-columns"
+  })
+
+  <div class="section text-align_center">
+    <div class="container">
+      <div class="row">
+        <section class="col-12">
+          <h2 class="section_header h1 text-transform_caps">Why Join?</h2>
+        </section>
+        <article class="col-lg-4 d-flex">
+          <a href="#" class="section_box section_box--with-border bg-color_white no-underline">
+            <div class="section_box-media d-flex align-items-center">
+              <div class="mx-auto">
+                <img src="images/icons/influence.png" alt="">
+              </div>
+            </div>
+            <div class="section_box-header">
+              <h3 class="h2">Have Your Say</h3>
+            </div>
+            <div class="section_box-description">
+              <p>Your opinions will help shape and influence tops brands in Ireland and around the world.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="col-lg-4 d-flex">
+          <a href="#" class="section_box section_box--with-border bg-color_white no-underline">
+            <div class="section_box-media d-flex align-items-center">
+              <div class="swiper-container gift-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide mx-auto">
+                    <img src="images/icons/gift_card_01.png" alt="">
+                  </div>
+                  <div class="swiper-slide mx-auto">
+                    <img src="images/icons/gift_card_02.png" alt="">
+                  </div>
+                  <div class="swiper-slide mx-auto">
+                    <img src="images/icons/gift_card_03.png" alt="">
+                  </div>
+                  <div class="swiper-slide mx-auto">
+                    <img src="images/icons/gift_card_04.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section_box-header">
+              <h3 class="h2">Free Gift Cards</h3>
+            </div>
+            <div class="section_box-description">
+              <p>Get rewarded for every survey you complete and can choose from a <span class="text-color_warn">massive range of Reward Partners</span></p>
+            </div>
+            <div class="swiper-pagination gift-slider-paggy"></div>
+          </a>
+        </article>
+
+        <article class="col-lg-4 d-flex">
+          <a href="#" class="section_box section_box--with-border bg-color_white no-underline">
+            <div class="section_box-media d-flex align-items-center">
+              <div class="mx-auto">
+                <img src="images/icons/prizes.png" alt="">
+              </div>
+            </div>
+            <div class="section_box-header">
+              <h3 class="h2">Win Big Prizes</h3>
+            </div>
+            <div class="section_box-description">
+              <p>Every month you can enter our Big Prize Draw for Luxurious Weekend Breaks, Concert Tickets and more.</p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="section text-align_center bg-color_white">
+    <div class="container">
+      <div class="row">
+        <section class="col-12">
+          <h2 class="section_header h3 text-transform_caps"><a href="#">How it works</a></h2>
+        </section>
+        <div class="col-lg-4 d-flex">
+          <article class="section_box bg-color_white no-underline">
+            <div class="section_box-media d-flex align-items-center">
+              <div class="mx-auto">
+                <img src="images/icons/surveys.png" alt="">
+              </div>
+            </div>
+            <div class="section_box-header">
+              <h3 class="h2">Take Surveys</h3>
+            </div>
+            <div class="section_box-description">
+              <p>Fill out quick surveys tailored to your profile</p>
+            </div>
+            <div class="filled-circle icon_chevron-right"></div>
+          </article>
+        </div>
+
+        <div class="col-lg-4 d-flex">
+          <article class="section_box bg-color_white no-underline">
+            <div class="section_box-media d-flex align-items-center">
+              <div class="mx-auto">
+                <img src="images/icons/points.png" alt="">
+              </div>
+            </div>
+            <div class="section_box-header">
+              <h3 class="h2">Earn Points</h3>
+            </div>
+            <div class="section_box-description">
+              <p>Each survey completed earns you points</p>
+            </div>
+            <div class="filled-circle icon_chevron-right"></div>
+          </article>
+        </div>
+
+        <div class="col-lg-4 d-flex">
+          <article class="section_box bg-color_white no-underline">
+            <div class="section_box-media d-flex align-items-center">
+              <div class="mx-auto">
+                <img src="images/icons/gift_card_prizes.png" alt="">
+              </div>
+            </div>
+            <div class="section_box-header">
+              <h3 class="h2">Get Free Gift Cards</h3>
+            </div>
+            <div class="section_box-description">
+              <p>Redeem the points against gift cards from companies such as Amazon, Brown Thomas and more...</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section text-align_center text-color_white section--bg_red">
+    <div class="container">
+      <div class="row">
+        <section class="col-12">
+          <h2 class="section_header h3 text-transform_caps">Testimonials</h2>
+        </section>
+        <div class="col-lg-8 mx-auto">
+          <div class="swiper-container testimonial-slider">
+            <div class="swiper-wrapper">
+              <figure class="section_testimonial swiper-slide">
+                <blockquote><i>The surveys are interesting and varied, and it is nice to be able to influence the brands that I usually buy.</i></blockquote>
+                <footer>
+                  <cite class="author"><small>Piotr, 41, Limerick</small></cite>
+                </footer>
+              </figure>
+              <figure class="section_testimonial swiper-slide">
+                <blockquote><i>The surveys are interesting and varied, and it is nice to be able to influence the brands that I usually buy.</i></blockquote>
+                <footer>
+                  <cite class="author"><small>Piotr, 41, Limerick</small></cite>
+                </footer>
+              </figure>
+              <figure class="section_testimonial swiper-slide">
+                <blockquote><i>The surveys are interesting and varied, and it is nice to be able to influence the brands that I usually buy.</i></blockquote>
+                <footer>
+                  <cite class="author"><small>Piotr, 41, Limerick</small></cite>
+                </footer>
+              </figure>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination testimonial-slider-paggy"></div>
+          </div>
+        </div>
+        <div class="col-12">
+          <a href="join.html" class="section_join-btn btn btn--white btn--clear d-inline-block text-transform_caps no-underline">Join now!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div class="container">
+      <div class="row">
+        <section class="col-lg-6 d-flex">
+          <div class="section_bg-mask section">
+            <div class="col-lg-8 mx-auto">
+              <h2 class="section_header h3 text-transform_caps text-align_center"><a href="#">ABOUT US</a></h2>
+              <p>MyOpinionMatters is Ireland's leading market research community. Made up of thousands of men and women just like you, MyOpinionMatters allows people from all over Ireland to participate in surveys and in return get paid for their opinions - as well as having the opportunity to help shape the products and services that companies provide.</p>
+            </div>
+          </div>
+        </section>
+        <section class="col-lg-6 d-flex">
+          <div class="section">
+            <h2 class="section_header h3 text-transform_caps text-align_center"><a href="#">faq</a></h2>
+            <div class="container offset-1">
+              <div class="row">
+                <div class="col-md-6">
+                  <a href="#" class="section_faq-item no-underline d-flex align-items-center default-hover">
+                    <img src="images/icons/faq_general_questions.png" alt="">
+                    <p>General Questions</p>
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="section_faq-item no-underline d-flex align-items-center default-hover">
+                    <img src="images/icons/faq_points.png" alt="">
+                    <p>Points & Rewards</p>
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="section_faq-item no-underline d-flex align-items-center default-hover">
+                    <img src="images/icons/faq_registration.png" alt="">
+                    <p>Registration</p>
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="section_faq-item no-underline d-flex align-items-center default-hover">
+                    <img src="images/icons/faq_details.png" alt="">
+                    <p>My Details</p>
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="section_faq-item no-underline d-flex align-items-center default-hover">
+                    <img src="images/icons/faq_surveys.png" alt="">
+                    <p>Surveys</p>
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="section_faq-item no-underline d-flex align-items-center default-hover">
+                    <img src="images/icons/faq_support.png" alt="">
+                    <p>Support</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  @@include('src/components/footer.component.html')
+
+  @@include('src/components/scripts.component.html')
+</body>
+</html>
