@@ -1,0 +1,12 @@
+C:\Users\sepoc\OneDrive\Documents\Business\Empathy Research\MyOpinionMatters\MyOpinionMatters\bin\Debug\netcoreapp2.0\MyOpinionMatters.deps.json
+C:\Users\sepoc\OneDrive\Documents\Business\Empathy Research\MyOpinionMatters\MyOpinionMatters\bin\Debug\netcoreapp2.0\MyOpinionMatters.runtimeconfig.json
+C:\Users\sepoc\OneDrive\Documents\Business\Empathy Research\MyOpinionMatters\MyOpinionMatters\bin\Debug\netcoreapp2.0\MyOpinionMatters.runtimeconfig.dev.json
+C:\Users\sepoc\OneDrive\Documents\Business\Empathy Research\MyOpinionMatters\MyOpinionMatters\bin\Debug\netcoreapp2.0\MyOpinionMatters.dll
+C:\Users\sepoc\OneDrive\Documents\Business\Empathy Research\MyOpinionMatters\MyOpinionMatters\bin\Debug\netcoreapp2.0\MyOpinionMatters.pdb
+C:\Users\sepoc\OneDrive\Documents\Business\Empathy Research\MyOpinionMatters\MyOpinionMatters\obj\Debug\netcoreapp2.0\MyOpinionMatters.csprojResolveAssemblyReference.cache
+C:\Users\sepoc\OneDrive\Documents\Business\Empathy Research\MyOpinionMatters\MyOpinionMatters\obj\Debug\netcoreapp2.0\MyOpinionMatters.csproj.CoreCompileInputs.cache
+C:\Users\sepoc\OneDrive\Documents\Business\Empathy Research\MyOpinionMatters\MyOpinionMatters\obj\Debug\netcoreapp2.0\MyOpinionMatters.AssemblyInfoInputs.cache
+C:\Users\sepoc\OneDrive\Documents\Business\Empathy Research\MyOpinionMatters\MyOpinionMatters\obj\Debug\netcoreapp2.0\MyOpinionMatters.AssemblyInfo.cs
+C:\Users\sepoc\OneDrive\Documents\Business\Empathy Research\MyOpinionMatters\MyOpinionMatters\obj\Debug\netcoreapp2.0\MyOpinionMatters.dll
+C:\Users\sepoc\OneDrive\Documents\Business\Empathy Research\MyOpinionMatters\MyOpinionMatters\obj\Debug\netcoreapp2.0\MyOpinionMatters.pdb
+C:\Users\sepoc\OneDrive\Documents\Business\Empathy Research\MyOpinionMatters\MyOpinionMatters\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
