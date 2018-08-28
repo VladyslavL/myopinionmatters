@@ -43,8 +43,8 @@ namespace MyOpinionMatters
 
             services.AddAuthentication().AddFacebook(facebookOptions =>
             {
-                facebookOptions.AppId = Configuration["Authentication:Facebook:AppId"];
-                facebookOptions.AppSecret = Configuration["Authentication:Facebook:AppSecret"];
+                facebookOptions.AppId = "285595205592866";
+                facebookOptions.AppSecret = "3e5d8e641d8a7dc5bd04ed1d39d7e49b";
             });
 
             services.Configure<AuthMessageSenderOptions>(Configuration);

@@ -13156,30 +13156,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sepoc\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/n0_th1nk/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sepoc\\OneDrive\\Documents\\Business\\Empathy Research\\MyOpinionMatters\\MyOpinionMatters\\MyOpinionMatters.csproj",
+      "projectUniqueName": "/Users/n0_th1nk/Desktop/myopinionmatters/NET/MyOpinionMatters/MyOpinionMatters.csproj",
       "projectName": "MyOpinionMatters",
-      "projectPath": "C:\\Users\\sepoc\\OneDrive\\Documents\\Business\\Empathy Research\\MyOpinionMatters\\MyOpinionMatters\\MyOpinionMatters.csproj",
-      "packagesPath": "C:\\Users\\sepoc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sepoc\\OneDrive\\Documents\\Business\\Empathy Research\\MyOpinionMatters\\MyOpinionMatters\\obj\\",
+      "projectPath": "/Users/n0_th1nk/Desktop/myopinionmatters/NET/MyOpinionMatters/MyOpinionMatters.csproj",
+      "packagesPath": "/Users/n0_th1nk/.nuget/packages/",
+      "outputPath": "/Users/n0_th1nk/Desktop/myopinionmatters/NET/MyOpinionMatters/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\sepoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/n0_th1nk/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
