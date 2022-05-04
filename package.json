@@ -25,6 +25,6 @@
     "normalize.css": "*",
     "rfs": "^7.1.1",
     "shufflejs": "^5.1.2",
-    "swiper": "^4.2.6"
+    "swiper": "~> 6.5.1"
   }
 }
